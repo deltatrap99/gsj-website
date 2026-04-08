@@ -1,0 +1,456 @@
+﻿<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Global Science Journey (GSJ) - Building Scientific Mindsets</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "gsj-navy": "#002147",
+                        "gsj-gold": "#D4AF37",
+                        "gsj-gold-light": "#E5C563",
+                        "background-light": "#FFFFFF",
+                        "background-soft": "#F9FAFB",
+                    },
+                    fontFamily: {
+                        "sans": ["Inter", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-header { 
+            background: rgba(255, 255, 255, 0.85); 
+            backdrop-filter: blur(12px); 
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .text-gold-gradient {
+            background: linear-gradient(to right, #D4AF37, #F1D676, #D4AF37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% auto;
+            animation: shine 4s linear infinite;
+        }
+        @keyframes shine {
+            to {
+                background-position: 200% center;
+            }
+        }
+        .gold-border-glow {
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        .gold-border-glow:hover {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+            border-color: #D4AF37;
+        }
+    </style>
+</head>
+<body class="bg-background-light text-gsj-navy font-sans antialiased selection:bg-gsj-gold selection:text-white">
+<header class="sticky top-0 z-50 w-full glass-header transition-all duration-300">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-24">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-gsj-navy flex items-center justify-center rounded-sm text-gsj-gold shadow-lg">
+<span class="material-symbols-outlined text-3xl">school</span>
+</div>
+<div class="flex flex-col">
+<span class="font-serif font-bold text-2xl text-gsj-navy leading-none tracking-wide">GSJ</span>
+<span class="text-[10px] font-semibold text-gsj-gold uppercase tracking-[0.25em]">Global Science Journey</span>
+</div>
+</div>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-sm font-medium text-gsj-navy hover:text-gsj-gold transition-colors tracking-wide" href="#">About</a>
+<a class="text-sm font-medium text-gsj-navy hover:text-gsj-gold transition-colors tracking-wide" href="#">Ecosystem</a>
+<a class="text-sm font-medium text-gsj-navy hover:text-gsj-gold transition-colors tracking-wide" href="#">Programs</a>
+<a class="text-sm font-medium text-gsj-navy hover:text-gsj-gold transition-colors tracking-wide" href="#">SAT 1500+</a>
+<a class="text-sm font-medium text-gsj-navy hover:text-gsj-gold transition-colors tracking-wide" href="#">Achievements</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden md:block bg-gsj-navy text-white px-7 py-3 rounded-sm font-medium text-sm hover:bg-gsj-gold hover:text-gsj-navy transition-all duration-300 shadow-md transform hover:-translate-y-0.5">
+                    Book Consultation
+                </button>
+<button class="lg:hidden text-gsj-navy">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<section class="relative min-h-[90vh] flex items-stretch overflow-hidden bg-background-soft">
+<div class="w-full lg:w-1/2 flex items-center justify-center p-8 lg:p-20 z-10 bg-white lg:bg-transparent">
+<div class="max-w-xl">
+<span class="inline-block px-3 py-1 mb-6 text-xs font-bold tracking-[0.2em] text-gsj-gold uppercase border border-gsj-gold/30 rounded-sm">
+                Premium Academic Ecosystem
+            </span>
+<h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-gsj-navy leading-[1.1] mb-8">
+                Building Scientific <span class="text-gsj-gold italic font-light">Mindsets</span>,<br/> Crafting Global <span class="text-gsj-gold italic font-light">Leaders</span>
+</h1>
+<p class="text-lg text-slate-600 mb-10 leading-relaxed font-light max-w-md">
+                GSJ is an international academic ecosystem empowering students through holistic development in STEM, research, business, and global study pathways.
+            </p>
+<div class="flex flex-col sm:flex-row gap-5">
+<button class="bg-gsj-navy text-white px-8 py-4 rounded-sm font-medium text-lg hover:bg-opacity-90 transition-all shadow-lg hover:shadow-xl hover:shadow-gsj-navy/20">
+                    Explore Programs
+                </button>
+<button class="flex items-center gap-2 px-8 py-4 rounded-sm font-medium text-lg text-gsj-navy hover:text-gsj-gold transition-colors group">
+<span>Watch Our Journey</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">play_circle</span>
+</button>
+</div>
+</div>
+</div>
+<div class="absolute lg:relative w-full lg:w-1/2 h-full inset-0 z-0">
+<div class="absolute inset-0 bg-gsj-navy/20 z-10"></div> 
+<img alt="International research forum with students collaborating" class="w-full h-full object-cover object-center" data-alt="High quality video background showing international research forums" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBl56S7w8IJfvIotukWAqp_yjahjFeoEwOYDG1klcgo74xIWKu96kgy1e1JdhbBZAnN9oW3RJGqsa83v-EUDwE5KWaN2RWHu7-oli31JMDrKOp2Gr4iZEgc2bjyqhGaeQDJG4VHpNeDiktCAOJr3R6D7DfwlqBzYRWvX1w6C5_qzpXI1-FldnhUYK5WbbTwu5cpzVcB-LloPEqEJca9urMbUc87MZyUPiaRX8p6YFCGKAQ1hq2k0UfcFjN7qKB6SB3Y0ozniNWP6Gw"/>
+<div class="absolute bottom-12 left-12 right-12 z-20 hidden lg:block">
+<div class="bg-white/90 backdrop-blur-md p-6 border-l-4 border-gsj-gold max-w-sm ml-auto rounded-sm shadow-2xl">
+<p class="font-serif italic text-gsj-navy text-lg">"Where curiosity meets world-class mentorship."</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white relative">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="font-serif text-4xl md:text-5xl font-bold text-gsj-navy mb-4">The 5 Ecosystem Pillars</h2>
+<div class="w-24 h-1 bg-gsj-gold mx-auto mb-6"></div>
+<p class="text-slate-500 max-w-2xl mx-auto font-light text-lg">Comprehensive foundations designed for international success.</p>
+</div>
+<div class="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
+<div class="group bg-white p-8 rounded-sm gold-border-glow transition-all duration-500 hover:-translate-y-2 cursor-pointer relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gsj-navy to-gsj-gold opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="w-16 h-16 rounded-full bg-gsj-navy/5 group-hover:bg-gsj-navy group-hover:text-gsj-gold text-gsj-navy flex items-center justify-center mb-6 transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">biotech</span>
+</div>
+<h3 class="font-serif font-bold text-xl text-gsj-navy mb-3 group-hover:text-gsj-gold transition-colors">STEM Integration</h3>
+<p class="text-sm text-slate-500 leading-relaxed">Advanced interdisciplinary learning in science &amp; technology.</p>
+</div>
+<div class="group bg-white p-8 rounded-sm gold-border-glow transition-all duration-500 hover:-translate-y-2 cursor-pointer relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gsj-navy to-gsj-gold opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="w-16 h-16 rounded-full bg-gsj-navy/5 group-hover:bg-gsj-navy group-hover:text-gsj-gold text-gsj-navy flex items-center justify-center mb-6 transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">science</span>
+</div>
+<h3 class="font-serif font-bold text-xl text-gsj-navy mb-3 group-hover:text-gsj-gold transition-colors">Research</h3>
+<p class="text-sm text-slate-500 leading-relaxed">Innovation and scientific inquiry with expert mentors.</p>
+</div>
+<div class="group bg-white p-8 rounded-sm gold-border-glow transition-all duration-500 hover:-translate-y-2 cursor-pointer relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gsj-navy to-gsj-gold opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="w-16 h-16 rounded-full bg-gsj-navy/5 group-hover:bg-gsj-navy group-hover:text-gsj-gold text-gsj-navy flex items-center justify-center mb-6 transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">assured_workload</span>
+</div>
+<h3 class="font-serif font-bold text-xl text-gsj-navy mb-3 group-hover:text-gsj-gold transition-colors">Business (ABS)</h3>
+<p class="text-sm text-slate-500 leading-relaxed">Leadership and entrepreneurship training for future CEOs.</p>
+</div>
+<div class="group bg-white p-8 rounded-sm gold-border-glow transition-all duration-500 hover:-translate-y-2 cursor-pointer relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gsj-navy to-gsj-gold opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="w-16 h-16 rounded-full bg-gsj-navy/5 group-hover:bg-gsj-navy group-hover:text-gsj-gold text-gsj-navy flex items-center justify-center mb-6 transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">public</span>
+</div>
+<h3 class="font-serif font-bold text-xl text-gsj-navy mb-3 group-hover:text-gsj-gold transition-colors">Career</h3>
+<p class="text-sm text-slate-500 leading-relaxed">International camps and global career orientation.</p>
+</div>
+<div class="group bg-white p-8 rounded-sm gold-border-glow transition-all duration-500 hover:-translate-y-2 cursor-pointer relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gsj-navy to-gsj-gold opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="w-16 h-16 rounded-full bg-gsj-navy/5 group-hover:bg-gsj-navy group-hover:text-gsj-gold text-gsj-navy flex items-center justify-center mb-6 transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">flight_takeoff</span>
+</div>
+<h3 class="font-serif font-bold text-xl text-gsj-navy mb-3 group-hover:text-gsj-gold transition-colors">Study Abroad</h3>
+<p class="text-sm text-slate-500 leading-relaxed">SAT 1500+ prep and scholarship roadmap strategy.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-gsj-navy overflow-hidden relative">
+<div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-white/5 to-transparent pointer-events-none"></div>
+<div class="absolute -bottom-24 -left-24 w-96 h-96 bg-gsj-gold/10 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16">
+<div>
+<h2 class="font-serif text-4xl md:text-5xl font-bold text-white mb-2">Global Excellence</h2>
+<p class="text-gsj-gold/80 font-light text-lg">Honoring the achievements of our scholars worldwide.</p>
+</div>
+<a class="text-white hover:text-gsj-gold transition-colors flex items-center gap-2 border-b border-gsj-gold/50 pb-1 mt-6 md:mt-0" href="#">
+                View all Awards <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid md:grid-cols-4 gap-6">
+<div class="group relative aspect-[3/4] cursor-pointer">
+<div class="absolute inset-0 border border-gsj-gold/30 rounded-sm group-hover:border-gsj-gold transition-colors duration-500 z-20"></div>
+<div class="absolute inset-[4px] border border-white/10 rounded-sm z-20"></div>
+<img alt="WICO Gold Medal" class="w-full h-full object-cover rounded-sm grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHhIl4KLiDw2fS4rJABmE-YuQluFXyYLj20dbIYDwyImbwWn8yOc0IgX0frRZd-peSagGREfea_moIWXgViFSDUpYWTOwpRAuwqjTjSDqdaxyKc8dH0KNJGyEhI4KKYTrKpGd9NDlgiin0QpPMUnCpiaMgwmc5rZuq0RVa0jsSf_B6mO49GAuf1Z47LhKNOM8GP_dFVpfCerHLHQqwTt3VpEH5VvPTP2Jq3ZtOumC0DZ496-moZRzAeplVF2zoAgppDYIPJwVSoDg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent rounded-sm z-10 flex flex-col justify-end p-6">
+<span class="text-gsj-gold font-bold text-xs tracking-widest uppercase mb-2">WICO 2023</span>
+<h4 class="font-serif text-white text-xl leading-tight">Gold Medal in Science</h4>
+</div>
+</div>
+<div class="group relative aspect-[3/4] cursor-pointer">
+<div class="absolute inset-0 border border-gsj-gold/30 rounded-sm group-hover:border-gsj-gold transition-colors duration-500 z-20"></div>
+<div class="absolute inset-[4px] border border-white/10 rounded-sm z-20"></div>
+<img alt="STEM Innovation" class="w-full h-full object-cover rounded-sm grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJF_HBf0zrN4ivGkeW4feMxqgG_dX-UPMIiY45751_eV5KXgLUac28_3PElJgymIku6gtOELEfqtx8IpeiYPW3EkB_JuLiQRjUrOIpVpDlSDszqH0wVwSIb0EvItykJ3smTG2vC79ux3glnhs2GWYxr3c9AkVQhakI5_EUKfVJCw003TQJrsFA-JVbpwhAhbN2JrRQREJaBNlt-0IBbVak9ya3cs6Tze4ITaCi1XoEAmN5L9fcls3GiRuQWE20C6xgzaciaokZQZs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent rounded-sm z-10 flex flex-col justify-end p-6">
+<span class="text-gsj-gold font-bold text-xs tracking-widest uppercase mb-2">International Olympic</span>
+<h4 class="font-serif text-white text-xl leading-tight">Young Researcher Excellence</h4>
+</div>
+</div>
+<div class="group relative aspect-[3/4] cursor-pointer">
+<div class="absolute inset-0 border border-gsj-gold/30 rounded-sm group-hover:border-gsj-gold transition-colors duration-500 z-20"></div>
+<div class="absolute inset-[4px] border border-white/10 rounded-sm z-20"></div>
+<img alt="Global Leadership" class="w-full h-full object-cover rounded-sm grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBolipcObBP-1Cg6JAMb9oIFQu65YiRyjAeMy9AYF706TPB8g3_gxDqcgqKsbyzCxl7iirRigPtwltMv69_HCpx2B2uk8Ii9cJyh1Ti5yE8scAbDOSIzb7fwPKYgOXFCHKavuCGF7esokbL-N5pYz9ytlyMQunSkf6mp0bh1-DMr6VHH0topuHjd8CY_Qnbra-DKKS6FdhAzbhbPM8i7Ca1sVoHcFTRWo3h8zcD-m3KoYIT9e2ndG4ewjK784u63JVWdfywenaJWMo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent rounded-sm z-10 flex flex-col justify-end p-6">
+<span class="text-gsj-gold font-bold text-xs tracking-widest uppercase mb-2">ABS Global</span>
+<h4 class="font-serif text-white text-xl leading-tight">Top 3 Business Initiative</h4>
+</div>
+</div>
+<div class="group relative aspect-[3/4] cursor-pointer">
+<div class="absolute inset-0 border border-gsj-gold/30 rounded-sm group-hover:border-gsj-gold transition-colors duration-500 z-20"></div>
+<div class="absolute inset-[4px] border border-white/10 rounded-sm z-20"></div>
+<img alt="Ivy League Admission" class="w-full h-full object-cover rounded-sm grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuNW6RU30rur0ARjrueszFovmCUacFDHJmUZmZEDgv9-YL-bwbyWMXAsAMrZgo2C6ltZf8THpLB-d9uWVXKSgVY-Lldc30MDCxBlXM1WhlkS7mDqznZJ5xQWmscJoZI1CngRlYwFDlUOx3B1iLc6KcIsipaACdozl44lSyRgTtJT4HD0BcV-S-HLCmCxyIUPxJvvXfjZ_RSPFQEzJo753BH8VCzs3wjZ_J-QzhILCbM9E8HFss7cO8-2PHsyCz7GSWvgiH7hAtiMs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent rounded-sm z-10 flex flex-col justify-end p-6">
+<span class="text-gsj-gold font-bold text-xs tracking-widest uppercase mb-2">Ivy League</span>
+<h4 class="font-serif text-white text-xl leading-tight">100% Scholarship Grant</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-background-soft">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<span class="text-gsj-navy font-bold text-xs tracking-[0.2em] uppercase mb-4 block">Mentorship</span>
+<h2 class="font-serif text-4xl md:text-5xl font-bold text-gsj-navy mb-16">Global Advisory Board</h2>
+<div class="grid md:grid-cols-4 gap-12">
+<div class="group">
+<div class="relative w-48 h-48 mx-auto mb-6">
+<div class="absolute inset-0 rounded-full border-2 border-gsj-navy opacity-10 group-hover:scale-110 transition-transform duration-500"></div>
+<div class="absolute inset-2 rounded-full border border-gsj-gold opacity-30 group-hover:opacity-100 transition-opacity duration-500"></div>
+<img alt="Dr. Richard Thompson" class="w-full h-full rounded-full object-cover shadow-2xl p-1 bg-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEKURWuDGiZNqY3Etgy9ok_33a0yDiY8BzwcOXECc7OVxDzuqVNWTu728z1zZzBfO2T99pkf8UFYY4ZkQ_Nl_ZMKYz3Xkp9WGk3eDpQYDFZOzWh2wgj5sljwKREldma7891lWiIBOBsfqYpmntXjBBeHfOBxY7qONgUqZcY_fv58xzSFQmYwXUFriCfl4SpiNqWu5FkWwTlyC7JEm0MjOnIlRxy1xX8DjleCGVRR-WzLU28Dn5jdpdvX31rmJnnbqaTEp_An5oTdM"/>
+</div>
+<h4 class="font-serif font-bold text-xl text-gsj-navy">Dr. Richard Thompson</h4>
+<p class="text-gsj-gold font-medium text-sm mt-1 mb-2">Harvard University</p>
+<p class="text-slate-500 text-xs uppercase tracking-wide">Senior Advisor</p>
+</div>
+<div class="group">
+<div class="relative w-48 h-48 mx-auto mb-6">
+<div class="absolute inset-0 rounded-full border-2 border-gsj-navy opacity-10 group-hover:scale-110 transition-transform duration-500"></div>
+<div class="absolute inset-2 rounded-full border border-gsj-gold opacity-30 group-hover:opacity-100 transition-opacity duration-500"></div>
+<img alt="Dr. Sarah Jenkins" class="w-full h-full rounded-full object-cover shadow-2xl p-1 bg-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8kstLhDsdXgt-tatPEtJgXE0ZLZx3tF1Ux5mBY6VgeNT4rZ5TH47d1YoCp6178LlGAhNuFBzkLno_NnEjrAJJL7Nmv5A0ESxc1eWRHCGhni01WmQr-ejOX_72H7Rj71w0_zQq6UDSUZ3XGlSjq3SGuAPb1BdKGLoJKkuBm44WqySMIoD86gwVKeXrjRNtyFr3qTPWS9CWmlIGeV_tH77QmnX16qpHwADmBZLF_1Pab7JfV4JguDpWkgN4d8odiCNGl9iIEKjznZc"/>
+</div>
+<h4 class="font-serif font-bold text-xl text-gsj-navy">Dr. Sarah Jenkins</h4>
+<p class="text-gsj-gold font-medium text-sm mt-1 mb-2">MIT STEM Lab</p>
+<p class="text-slate-500 text-xs uppercase tracking-wide">Director</p>
+</div>
+<div class="group">
+<div class="relative w-48 h-48 mx-auto mb-6">
+<div class="absolute inset-0 rounded-full border-2 border-gsj-navy opacity-10 group-hover:scale-110 transition-transform duration-500"></div>
+<div class="absolute inset-2 rounded-full border border-gsj-gold opacity-30 group-hover:opacity-100 transition-opacity duration-500"></div>
+<img alt="Prof. Michael Wong" class="w-full h-full rounded-full object-cover shadow-2xl p-1 bg-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCasL-YiCB7OAcSMahovM-SfLoICaweWFM3AZVx-tg5MYN2BAA6bN4OLzwDs6tDKDbxfmv8iDKG-lbDgB8xfcsSTAwaeZeoWD4ID5rvRe9k47uvTYBQaCVeIF5mhs30D6yMwXuWnumkjtMpoccyR2tlj9SAHMxx4QXR6DW2TlaW1hAk7XJyhuB-YkGph8GdU0NPOap7aEotyzMkAehobqvGkLTOJOdUDAPG2-2Hy0cbNK_mS1OSuZYB_t37IY1vsryiWXcXyD9gXCc"/>
+</div>
+<h4 class="font-serif font-bold text-xl text-gsj-navy">Prof. Michael Wong</h4>
+<p class="text-gsj-gold font-medium text-sm mt-1 mb-2">Stanford University</p>
+<p class="text-slate-500 text-xs uppercase tracking-wide">Research Fellow</p>
+</div>
+<div class="group">
+<div class="relative w-48 h-48 mx-auto mb-6">
+<div class="absolute inset-0 rounded-full border-2 border-gsj-navy opacity-10 group-hover:scale-110 transition-transform duration-500"></div>
+<div class="absolute inset-2 rounded-full border border-gsj-gold opacity-30 group-hover:opacity-100 transition-opacity duration-500"></div>
+<img alt="Dr. Elena Rodriguez" class="w-full h-full rounded-full object-cover shadow-2xl p-1 bg-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2uJpE8Cd8I3miObxNn9koTeNGDXXg93VqRmKeWc2Zkfq2-ktLLRn6DNjPbson7LZ20bWUY0FOg-3QIncGPYGoysTP6Aaf8vz_0XrBG3Fth176hSjUKdzOE7qvqmC1zkOyj33eAkj-FXimYJ2U-wP_BmdusIYsoDIkXRZThEOnEjPmswwLQA080H4qHvUeZcmKSzJOoEWgXmhfBZtvGZxjyOIzJ0PQGbe1QizHVbgOhXR6cvzBhvkwU9EddwCEAKTaBlOGqJYm6VM"/>
+</div>
+<h4 class="font-serif font-bold text-xl text-gsj-navy">Dr. Elena Rodriguez</h4>
+<p class="text-gsj-gold font-medium text-sm mt-1 mb-2">Oxbridge Admissions</p>
+<p class="text-slate-500 text-xs uppercase tracking-wide">Strategic Expert</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white overflow-hidden">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-center font-serif text-4xl md:text-5xl font-bold text-gsj-navy mb-24">Your Pathway to Success</h2>
+<div class="relative">
+<div class="absolute top-1/2 left-0 w-full h-[2px] bg-slate-100 -translate-y-1/2 hidden md:block">
+<div class="h-full bg-gradient-to-r from-gsj-navy via-gsj-gold to-gsj-navy w-0 animate-[growWidth_3s_ease-out_forwards]"></div>
+</div>
+<style>
+                @keyframes growWidth {
+                    0% { width: 0; }
+                    100% { width: 100%; }
+                }
+                @keyframes pulseGold {
+                    0%, 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+                    70% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); }
+                }
+            </style>
+<div class="grid md:grid-cols-4 gap-8 relative z-10">
+<div class="group text-center">
+<div class="w-16 h-16 bg-white border-4 border-gsj-navy text-gsj-navy rounded-full flex items-center justify-center mx-auto mb-6 relative z-20 shadow-lg group-hover:border-gsj-gold transition-colors duration-300">
+<span class="font-serif font-bold text-xl">01</span>
+</div>
+<h4 class="font-serif font-bold text-gsj-navy text-xl mb-2">Foundation</h4>
+<p class="text-sm text-slate-500 px-4">Establishing core scientific knowledge and curiosity.</p>
+</div>
+<div class="group text-center">
+<div class="w-16 h-16 bg-white border-4 border-gsj-navy text-gsj-navy rounded-full flex items-center justify-center mx-auto mb-6 relative z-20 shadow-lg group-hover:border-gsj-gold transition-colors duration-300 delay-150">
+<span class="font-serif font-bold text-xl">02</span>
+</div>
+<h4 class="font-serif font-bold text-gsj-navy text-xl mb-2">Research</h4>
+<p class="text-sm text-slate-500 px-4">Engaging in deep research and international competitions.</p>
+</div>
+<div class="group text-center">
+<div class="w-16 h-16 bg-white border-4 border-gsj-navy text-gsj-navy rounded-full flex items-center justify-center mx-auto mb-6 relative z-20 shadow-lg group-hover:border-gsj-gold transition-colors duration-300 delay-300">
+<span class="font-serif font-bold text-xl">03</span>
+</div>
+<h4 class="font-serif font-bold text-gsj-navy text-xl mb-2">Leadership</h4>
+<p class="text-sm text-slate-500 px-4">Mastering SATs and developing leadership portfolios.</p>
+</div>
+<div class="group text-center">
+<div class="w-16 h-16 bg-gsj-gold text-white rounded-full flex items-center justify-center mx-auto mb-6 relative z-20 shadow-xl border-4 border-white" style="animation: pulseGold 2s infinite;">
+<span class="font-serif font-bold text-xl">04</span>
+</div>
+<h4 class="font-serif font-bold text-gsj-navy text-xl mb-2">Global Scholar</h4>
+<p class="text-sm text-slate-500 px-4">Securing scholarships at top-tier global universities.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white border-t border-slate-100">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="font-serif text-4xl md:text-5xl font-bold text-gsj-navy mb-4">Begin your research journey today</h2>
+<p class="text-slate-500 text-lg">Partner with world-class mentors to build your academic future.</p>
+</div>
+<div class="bg-white p-8 md:p-12 rounded-sm shadow-2xl border border-slate-100 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-gsj-navy to-gsj-gold"></div>
+<form class="space-y-6">
+<div class="grid md:grid-cols-2 gap-6">
+<div>
+<label class="block text-xs font-bold text-gsj-navy uppercase tracking-wider mb-2">Full Name</label>
+<input class="w-full border-slate-200 bg-slate-50 rounded-sm px-4 py-3 focus:ring-gsj-navy focus:border-gsj-navy transition-all outline-none" placeholder="Student Name" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-gsj-navy uppercase tracking-wider mb-2">Current Grade</label>
+<select class="w-full border-slate-200 bg-slate-50 rounded-sm px-4 py-3 focus:ring-gsj-navy focus:border-gsj-navy transition-all outline-none text-slate-600">
+<option>Grade 9</option>
+<option>Grade 10</option>
+<option>Grade 11</option>
+<option>Grade 12</option>
+<option>Other</option>
+</select>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-6">
+<div>
+<label class="block text-xs font-bold text-gsj-navy uppercase tracking-wider mb-2">Phone Number</label>
+<input class="w-full border-slate-200 bg-slate-50 rounded-sm px-4 py-3 focus:ring-gsj-navy focus:border-gsj-navy transition-all outline-none" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-gsj-navy uppercase tracking-wider mb-2">Email Address</label>
+<input class="w-full border-slate-200 bg-slate-50 rounded-sm px-4 py-3 focus:ring-gsj-navy focus:border-gsj-navy transition-all outline-none" placeholder="email@example.com" type="email"/>
+</div>
+</div>
+<div>
+<label class="block text-xs font-bold text-gsj-navy uppercase tracking-wider mb-2">Area of Interest</label>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-2">
+<label class="flex items-center space-x-2 cursor-pointer p-3 border border-slate-200 rounded-sm hover:border-gsj-navy transition-colors">
+<input class="form-checkbox text-gsj-navy rounded-sm focus:ring-0" type="checkbox"/>
+<span class="text-sm text-slate-600">Research</span>
+</label>
+<label class="flex items-center space-x-2 cursor-pointer p-3 border border-slate-200 rounded-sm hover:border-gsj-navy transition-colors">
+<input class="form-checkbox text-gsj-navy rounded-sm focus:ring-0" type="checkbox"/>
+<span class="text-sm text-slate-600">SAT Prep</span>
+</label>
+<label class="flex items-center space-x-2 cursor-pointer p-3 border border-slate-200 rounded-sm hover:border-gsj-navy transition-colors">
+<input class="form-checkbox text-gsj-navy rounded-sm focus:ring-0" type="checkbox"/>
+<span class="text-sm text-slate-600">Business</span>
+</label>
+<label class="flex items-center space-x-2 cursor-pointer p-3 border border-slate-200 rounded-sm hover:border-gsj-navy transition-colors">
+<input class="form-checkbox text-gsj-navy rounded-sm focus:ring-0" type="checkbox"/>
+<span class="text-sm text-slate-600">Study Abroad</span>
+</label>
+</div>
+</div>
+<div class="pt-4">
+<button class="w-full bg-gradient-to-r from-gsj-navy to-[#003366] hover:to-gsj-navy text-white font-bold text-lg py-4 rounded-sm shadow-lg hover:shadow-xl transition-all uppercase tracking-widest border border-gsj-navy" type="submit">
+                        Apply for Consultation
+                    </button>
+<p class="text-center text-xs text-slate-400 mt-4">By submitting, you agree to our privacy policy. Your information is secure.</p>
+</div>
+</form>
+</div>
+</div>
+</section>
+<footer class="bg-gsj-navy text-white pt-20 pb-10 border-t-4 border-gsj-gold">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 bg-white flex items-center justify-center rounded-sm text-gsj-navy">
+<span class="material-symbols-outlined text-2xl">school</span>
+</div>
+<div class="flex flex-col">
+<span class="font-serif font-bold text-2xl leading-none">GSJ</span>
+</div>
+</div>
+<p class="text-slate-300 text-sm leading-relaxed font-light">
+                    The premier international academic ecosystem, dedicated to guiding students toward the pinnacles of global knowledge and leadership.
+                </p>
+</div>
+<div>
+<h4 class="font-serif font-bold text-lg mb-6 text-gsj-gold">Quick Links</h4>
+<ul class="space-y-4 text-sm text-slate-300 font-light">
+<li><a class="hover:text-white transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-white transition-colors" href="#">The Ecosystem</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Academic Programs</a></li>
+<li><a class="hover:text-white transition-colors" href="#">News &amp; Events</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-serif font-bold text-lg mb-6 text-gsj-gold">Contact</h4>
+<ul class="space-y-4 text-sm text-slate-300 font-light">
+<li class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-gsj-gold text-sm mt-1">location_on</span>
+<span>123 Academic Blvd, Global District, Innovation City</span>
+</li>
+<li class="flex gap-3 items-center">
+<span class="material-symbols-outlined text-gsj-gold text-sm">call</span>
+<span>+1 (800) 123-4567</span>
+</li>
+<li class="flex gap-3 items-center">
+<span class="material-symbols-outlined text-gsj-gold text-sm">mail</span>
+<span>admissions@gsj.edu</span>
+</li>
+</ul>
+</div>
+<div>
+<h4 class="font-serif font-bold text-lg mb-6 text-gsj-gold">Connect</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-slate-600 flex items-center justify-center text-white hover:bg-gsj-gold hover:border-gsj-gold hover:text-gsj-navy transition-all" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-slate-600 flex items-center justify-center text-white hover:bg-gsj-gold hover:border-gsj-gold hover:text-gsj-navy transition-all" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-slate-600 flex items-center justify-center text-white hover:bg-gsj-gold hover:border-gsj-gold hover:text-gsj-navy transition-all" href="#">
+<span class="material-symbols-outlined text-sm">play_arrow</span>
+</a>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500 font-light">
+<p>Â© 2024 Global Science Journey. All rights reserved.</p>
+</div>
+</div>
+</footer>
+
+</body></html>
