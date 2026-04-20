@@ -50,7 +50,7 @@ export default function Programs() {
                     Global Academic Pathway
                 </span>
 <h1 className="text-5xl md:text-7xl font-black text-white leading-[1.1] mb-6 tracking-tight">
-                    Hệ Thống Chương Trình <br/><span className="text-secondary" />Đào Tạo GSJ</span>
+                    Hệ Thống Chương Trình <br/><span className="text-secondary">Đào Tạo GSJ</span>
 </h1>
 <p className="text-xl text-slate-100 mb-10 leading-relaxed font-medium">
                     Khám phá hệ sinh thái giáo dục chuẩn quốc tế, từ nền tảng Khoa học thực hành đến chiến lược săn học bổng toàn cầu tại những đại học hàng đầu thế giới.

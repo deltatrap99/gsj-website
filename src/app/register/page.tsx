@@ -1,334 +1,281 @@
 "use client";
 
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Nav } from "@/components/Nav";
+import { Footer } from "@/components/Footer";
+import { ArrowRight, CheckCircle2, FlaskConical, Globe, BookOpen, Star, Sparkles, User, Mail, Phone, GraduationCap, MapPin, Clock, CalendarHeart } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Register() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitted(true);
+    // Submit logic goes here
+  };
+
   return (
-    <>
+    <main className="min-h-screen bg-white text-gray-800 font-sans selection:bg-[#0047F6]/20 selection:text-[#0A2B70]">
+      <Nav />
       
+      {/* 1. HERO & FORM SECTION */}
+      <section className="relative pt-24 pb-20 lg:pt-32 lg:pb-32 bg-[#F4F7FF] overflow-hidden">
+        {/* Abstract Background Elements */}
+        <div className="absolute top-[-10%] right-[-5%] w-[800px] h-[800px] bg-[#0047F6]/5 rounded-full blur-[120px] pointer-events-none"></div>
+        <div className="absolute bottom-[-10%] left-[-5%] w-[600px] h-[600px] bg-yellow-400/5 rounded-full blur-[100px] pointer-events-none"></div>
 
-<header className="sticky top-0 z-50 w-full border-b border-slate-100 glass-effect">
-<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div className="flex justify-between items-center h-20">
-<div className="flex items-center gap-3">
-<div className="w-10 h-10 bg-primary flex items-center justify-center rounded-lg">
-<span className="material-symbols-outlined text-white text-2xl">science</span>
-</div>
-<div>
-<h1 className="text-primary font-bold text-xl tracking-tight">GSJ</h1>
-<p className="text-[10px] uppercase tracking-widest text-slate-500 font-semibold">Global Science Journey</p>
-</div>
-</div>
-<nav className="hidden md:flex space-x-10">
-<a className="text-sm font-medium text-slate-600 hover:text-primary transition-colors" href="#">Programs</a>
-<a className="text-sm font-medium text-slate-600 hover:text-primary transition-colors" href="#">About</a>
-<a className="text-sm font-medium text-slate-600 hover:text-primary transition-colors" href="#">Achievements</a>
-<a className="text-sm font-medium text-slate-600 hover:text-primary transition-colors" href="#">Resources</a>
-</nav>
-<div className="flex items-center gap-4">
-<button className="hidden lg:block text-sm font-semibold text-primary px-4 py-2">Log In</button>
-<button className="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-opacity-90 transition-all shadow-md">
-                        Join Now
-                    </button>
-</div>
-</div>
-</div>
-</header>
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
+          <div className="grid lg:grid-cols-[1fr_1.1fr] gap-16 lg:gap-24 items-start">
+            
+            {/* Left Content */}
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="space-y-8"
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0047F6]/10 text-[#0047F6] text-xs font-bold uppercase tracking-widest border border-[#0047F6]/20">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0047F6] opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#0047F6]"></span>
+                </span>
+                Tuyển sinh 2024
+              </div>
+              
+              <h1 className="text-4xl lg:text-[54px] font-black text-[#0A2B70] leading-[1.1] tracking-tight">
+                Đăng ký Học thử <br/><span className="text-[#0047F6]">Trải nghiệm</span>
+              </h1>
+              
+              <p className="text-lg text-gray-600 font-medium leading-relaxed max-w-lg">
+                Khám phá tiềm năng khoa học và tư duy lãnh đạo của học sinh qua các lớp học thực nghiệm chuẩn quốc tế tại Global Science Journey.
+              </p>
+              
+              <div className="grid grid-cols-2 gap-6 pt-4">
+                <div className="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-gray-100">
+                  <div className="w-12 h-12 rounded-xl bg-[#F4F7FF] flex items-center justify-center text-[#0047F6]">
+                    <FlaskConical className="w-6 h-6" />
+                  </div>
+                  <span className="text-sm font-bold text-[#0A2B70] leading-snug">Phương pháp<br/>thực chứng</span>
+                </div>
+                <div className="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-gray-100">
+                  <div className="w-12 h-12 rounded-xl bg-[#F4F7FF] flex items-center justify-center text-[#0047F6]">
+                    <Globe className="w-6 h-6" />
+                  </div>
+                  <span className="text-sm font-bold text-[#0A2B70] leading-snug">Tiêu chuẩn<br/>Quốc tế</span>
+                </div>
+              </div>
 
-<section className="relative bg-slate-50 py-16 lg:py-24 overflow-hidden">
-<div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12 transform translate-x-20"></div>
-<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-<div className="grid lg:grid-cols-2 gap-16 items-start">
+              <div className="rounded-[2rem] overflow-hidden shadow-xl border-4 border-white aspect-[4/3] md:aspect-video relative group mt-8">
+                <img 
+                  alt="Student working in lab" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                  src="/science-class.png" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A2B70]/80 via-[#0A2B70]/30 to-transparent flex items-end p-8">
+                  <p className="text-white font-medium text-lg leading-snug italic">
+                    "Môi trường học tập sáng tạo truyền cảm hứng cho những nhà khoa học tương lai."
+                  </p>
+                </div>
+              </div>
+            </motion.div>
 
-<div className="space-y-8">
-<div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-green/10 text-accent-green text-xs font-bold uppercase tracking-wider">
-<span className="relative flex h-2 w-2">
-<span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-green opacity-75"></span>
-<span className="relative inline-flex rounded-full h-2 w-2 bg-accent-green"></span>
-</span>
-                        Admission Open 2024
+            {/* Right Form */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <div className="bg-white rounded-[2.5rem] shadow-[0_20px_60px_rgba(0,30,100,0.05)] border border-gray-100 p-8 lg:p-12">
+                
+                {isSubmitted ? (
+                  <div className="text-center py-16">
+                    <div className="w-20 h-20 bg-[#0047F6]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <CheckCircle2 className="w-10 h-10 text-[#0047F6]" />
                     </div>
-<h1 className="text-5xl lg:text-6xl font-black text-primary leading-[1.1] tracking-tight">
-                        Đăng ký Học thử <br/><span className="text-accent-green" />Trải nghiệm</span>
-</h1>
-<p className="text-lg text-slate-600 leading-relaxed max-w-xl">
-                        Khám phá tiềm năng khoa học và tư duy lãnh đạo của học sinh qua các lớp học thực nghiệm chuẩn quốc tế tại Global Science Journey.
+                    <h3 className="text-3xl font-black text-[#0A2B70] mb-4">Đăng ký thành công!</h3>
+                    <p className="text-gray-600 font-medium mb-8">
+                      Cảm ơn bạn đã quan tâm. Đội ngũ GSJ sẽ liên hệ với bạn trong thời gian sớm nhất để xác nhận lịch học thử.
                     </p>
-<div className="grid grid-cols-2 gap-6 pt-4">
-<div className="flex items-center gap-3">
-<div className="w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center text-primary">
-<span className="material-symbols-outlined">verified</span>
-</div>
-<span className="text-sm font-semibold text-slate-700">STEM Certified</span>
-</div>
-<div className="flex items-center gap-3">
-<div className="w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center text-primary">
-<span className="material-symbols-outlined">public</span>
-</div>
-<span className="text-sm font-semibold text-slate-700">Global Standards</span>
-</div>
-</div>
-<div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-white aspect-video relative group">
-<img alt="Student working in a modern chemistry lab" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Student conducting a science experiment in lab" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0cu6-q_DSzgiT4N0qPyLojApzBvJ6vTx2SqzMppN_U08YgNdpvR25zW0czCFNRvxh651JnTczTv0maS1UPWPQM_o2f2Nrx43iam73zovs8CuLjIE_xHlUEmHoS6EGlRvbcWFdunMQFztgiUeyp5r3n6MScUjpLwSAwLTplZIh1F8OXu2xazrG0U2uJqmFXJnO5m0d3SWLoZ6HCwh-o0wh6i6eFxHO_6hM-4UdAmn6HuEtW9H05dEz6RAqOSnZsWw1FNONWFU_Tpk"/>
-<div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent flex items-end p-8">
-<p className="text-white font-medium italic">"Môi trường học tập sáng tạo truyền cảm hứng cho những nhà khoa học tương lai."</p>
-</div>
-</div>
-</div>
+                    <button 
+                      onClick={() => setIsSubmitted(false)}
+                      className="bg-[#F4F7FF] text-[#0047F6] font-bold py-3 px-8 rounded-full hover:bg-[#0047F6] hover:text-white transition-all"
+                    >
+                      Đăng ký thêm
+                    </button>
+                  </div>
+                ) : (
+                  <>
+                    <div className="mb-10 text-center">
+                      <h3 className="text-3xl font-black text-[#0A2B70] uppercase">Thông tin Đăng ký</h3>
+                      <p className="text-gray-500 font-medium mt-3">Vui lòng điền thông tin để giữ chỗ nhận ưu đãi.</p>
+                    </div>
 
-<div className="bg-white rounded-2xl shadow-xl p-8 border border-slate-100">
-<div className="mb-8">
-<h3 className="text-2xl font-bold text-primary">Trial Class Registration</h3>
-<p className="text-slate-500 text-sm mt-1">Fill in the details below to secure your spot.</p>
-</div>
-<form className="space-y-5">
-<div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-<div>
-<label className="block text-sm font-semibold text-slate-700 mb-2">Parent Name</label>
-<input className="w-full rounded-lg border-slate-200 focus:border-primary focus:ring-primary text-sm p-3" placeholder="Nguyễn Văn A" type="text"/>
-</div>
-<div>
-<label className="block text-sm font-semibold text-slate-700 mb-2">Student Name</label>
-<input className="w-full rounded-lg border-slate-200 focus:border-primary focus:ring-primary text-sm p-3" placeholder="Nguyễn Thu B" type="text"/>
-</div>
-</div>
-<div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-<div>
-<label className="block text-sm font-semibold text-slate-700 mb-2">Current Grade</label>
-<select className="w-full rounded-lg border-slate-200 focus:border-primary focus:ring-primary text-sm p-3">
-<option>Select Grade</option>
-<option>Grade 6</option>
-<option>Grade 7</option>
-<option>Grade 8</option>
-<option>Grade 9</option>
-<option>High School</option>
-</select>
-</div>
-<div>
-<label className="block text-sm font-semibold text-slate-700 mb-2">Phone Number</label>
-<input className="w-full rounded-lg border-slate-200 focus:border-primary focus:ring-primary text-sm p-3" placeholder="090 123 4567" type="tel"/>
-</div>
-</div>
-<div>
-<label className="block text-sm font-semibold text-slate-700 mb-2">Email Address</label>
-<input className="w-full rounded-lg border-slate-200 focus:border-primary focus:ring-primary text-sm p-3" placeholder="example@email.com" type="email"/>
-</div>
-<div>
-<label className="block text-sm font-semibold text-slate-700 mb-2">Interested Program</label>
-<select className="w-full rounded-lg border-slate-200 focus:border-primary focus:ring-primary text-sm p-3">
-<option>Select a program</option>
-<option>Practical Science</option>
-<option>Research &amp; Development</option>
-<option>Applied Bio Science (ABS)</option>
-<option>SAT Elite</option>
-<option>Career Camp</option>
-</select>
-</div>
-<div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-<div>
-<label className="block text-sm font-semibold text-slate-700 mb-2">Preferred Branch</label>
-<select className="w-full rounded-lg border-slate-200 focus:border-primary focus:ring-primary text-sm p-3">
-<option>Main Campus (District 1)</option>
-<option>Academic Center (District 7)</option>
-<option>Online Session</option>
-</select>
-</div>
-<div>
-<label className="block text-sm font-semibold text-slate-700 mb-2">Preferred Time</label>
-<select className="w-full rounded-lg border-slate-200 focus:border-primary focus:ring-primary text-sm p-3">
-<option>Weekend Morning</option>
-<option>Weekend Afternoon</option>
-<option>Weekday Evening</option>
-</select>
-</div>
-</div>
-<button className="w-full bg-primary text-white py-4 rounded-xl font-bold text-lg hover:bg-opacity-95 transition-all shadow-lg shadow-primary/20 mt-4" type="submit">
-                            Đăng ký ngay
-                        </button>
-<p className="text-center text-xs text-slate-400 mt-4">
-                            By clicking, you agree to our <a className="underline" href="#">Terms of Service</a> and <a className="underline" href="#">Privacy Policy</a>.
-                        </p>
-</form>
-</div>
-</div>
-</div>
-</section>
+                    <form className="space-y-6" onSubmit={handleSubmit}>
+                      <div className="grid md:grid-cols-2 gap-6">
+                        <div className="space-y-2">
+                          <label className="text-sm font-bold text-[#0A2B70] flex items-center gap-2">
+                            <User className="w-4 h-4 text-[#0047F6]" /> Họ tên Phụ huynh *
+                          </label>
+                          <input required className="w-full rounded-xl border-gray-200 bg-gray-50 focus:bg-white focus:border-[#0047F6] focus:ring-2 focus:ring-[#0047F6]/20 transition-all text-sm p-4 outline-none font-medium text-gray-800" placeholder="Nguyễn Văn A" type="text" />
+                        </div>
+                        <div className="space-y-2">
+                          <label className="text-sm font-bold text-[#0A2B70] flex items-center gap-2">
+                            <GraduationCap className="w-4 h-4 text-[#0047F6]" /> Họ tên Học sinh *
+                          </label>
+                          <input required className="w-full rounded-xl border-gray-200 bg-gray-50 focus:bg-white focus:border-[#0047F6] focus:ring-2 focus:ring-[#0047F6]/20 transition-all text-sm p-4 outline-none font-medium text-gray-800" placeholder="Nguyễn Thu B" type="text" />
+                        </div>
+                      </div>
 
-<section className="py-24 bg-white">
-<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div className="text-center mb-16">
-<h2 className="text-3xl font-extrabold text-primary sm:text-4xl">Tại sao nên chọn GSJ?</h2>
-<p className="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">Chúng tôi mang đến nền tảng giáo dục khoa học toàn diện, kết hợp giữa lý thuyết và thực hành chuyên sâu.</p>
-</div>
-<div className="grid md:grid-cols-3 gap-12">
-<div className="text-center space-y-4">
-<div className="w-16 h-16 bg-primary/5 text-primary rounded-2xl flex items-center justify-center mx-auto mb-6">
-<span className="material-symbols-outlined text-4xl">menu_book</span>
-</div>
-<h3 className="text-xl font-bold text-primary">International Curriculum</h3>
-<p className="text-slate-600">Giáo trình chuẩn quốc tế được thiết kế bởi các chuyên gia hàng đầu từ các trường đại học danh tiếng.</p>
-</div>
-<div className="text-center space-y-4">
-<div className="w-16 h-16 bg-accent-green/5 text-accent-green rounded-2xl flex items-center justify-center mx-auto mb-6">
-<span className="material-symbols-outlined text-4xl">school</span>
-</div>
-<h3 className="text-xl font-bold text-primary">Expert Mentors</h3>
-<p className="text-slate-600">Đội ngũ giảng viên là các Tiến sĩ, Thạc sĩ có kinh nghiệm nghiên cứu và giảng dạy tại nước ngoài.</p>
-</div>
-<div className="text-center space-y-4">
-<div className="w-16 h-16 bg-primary/5 text-primary rounded-2xl flex items-center justify-center mx-auto mb-6">
-<span className="material-symbols-outlined text-4xl">biotech</span>
-</div>
-<h3 className="text-xl font-bold text-primary">Modern Lab Facilities</h3>
-<p className="text-slate-600">Phòng thí nghiệm hiện đại với trang thiết bị tối tân, đảm bảo môi trường thực hành an toàn và chuyên nghiệp.</p>
-</div>
-</div>
-</div>
-</section>
+                      <div className="grid md:grid-cols-2 gap-6">
+                        <div className="space-y-2">
+                          <label className="text-sm font-bold text-[#0A2B70] flex items-center gap-2">
+                            <Star className="w-4 h-4 text-[#0047F6]" /> Khối lớp hiện tại
+                          </label>
+                          <select className="w-full rounded-xl border-gray-200 bg-gray-50 focus:bg-white focus:border-[#0047F6] focus:ring-2 focus:ring-[#0047F6]/20 transition-all text-sm p-4 outline-none font-medium text-gray-800 appearance-none">
+                            <option value="">Chọn khối lớp</option>
+                            <option>Lớp 6</option>
+                            <option>Lớp 7</option>
+                            <option>Lớp 8</option>
+                            <option>Lớp 9</option>
+                            <option>THPT (Lớp 10-12)</option>
+                          </select>
+                        </div>
+                        <div className="space-y-2">
+                          <label className="text-sm font-bold text-[#0A2B70] flex items-center gap-2">
+                            <Phone className="w-4 h-4 text-[#0047F6]" /> Số điện thoại *
+                          </label>
+                          <input required className="w-full rounded-xl border-gray-200 bg-gray-50 focus:bg-white focus:border-[#0047F6] focus:ring-2 focus:ring-[#0047F6]/20 transition-all text-sm p-4 outline-none font-medium text-gray-800" placeholder="090 123 4567" type="tel" />
+                        </div>
+                      </div>
 
-<section className="py-24 bg-slate-50">
-<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div className="flex justify-between items-end mb-12">
-<div>
-<h2 className="text-3xl font-extrabold text-primary">Success Stories</h2>
-<p className="mt-2 text-slate-600">Những thành tựu nổi bật của học viên GSJ trên đấu trường quốc tế.</p>
-</div>
-<a className="text-primary font-bold flex items-center gap-1 hover:underline" href="#">
-                    See all achievements <span className="material-symbols-outlined">arrow_right_alt</span>
-</a>
-</div>
-<div className="grid md:grid-cols-3 gap-8">
+                      <div className="space-y-2">
+                        <label className="text-sm font-bold text-[#0A2B70] flex items-center gap-2">
+                          <Mail className="w-4 h-4 text-[#0047F6]" /> Địa chỉ Email
+                        </label>
+                        <input className="w-full rounded-xl border-gray-200 bg-gray-50 focus:bg-white focus:border-[#0047F6] focus:ring-2 focus:ring-[#0047F6]/20 transition-all text-sm p-4 outline-none font-medium text-gray-800" placeholder="example@email.com" type="email" />
+                      </div>
 
-<div className="bg-white rounded-xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-<div className="aspect-video relative">
-<img alt="Student receiving award" className="w-full h-full object-cover" data-alt="Student holding a science competition trophy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd4oMXsGhEgOoJFcxYrTbIJhVB_dQXUmr1XYp5VO7z5OAv6Yq9IaMLo_DACXnIl4LxDsqfOfxUGaKI3lcV-ixWEUOhJ58ilO3zu-7Iv9HezemzXai2pPqAy4pO4b3vN7ZsuFWhguA9J4KC-6ztWGxrhKogCC8elOxwqAi3ie2nrZK0h512E5zpzLVx_V7PiQGBrW3NTD_aiWZBmCosW98uWeQ1TkDPTwY-F4l72cjTx-0w1MPiB6bkWfAE3KjNVvATFnWi2RrztmA"/>
-<div className="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded">2023 WINNER</div>
-</div>
-<div className="p-6">
-<h4 className="text-lg font-bold text-primary mb-2">Huy chương Vàng ISEF 2023</h4>
-<p className="text-sm text-slate-600">Dự án nghiên cứu về vi khuẩn tự phân hủy nhựa của nhóm học viên GSJ.</p>
-</div>
-</div>
+                      <div className="space-y-2">
+                        <label className="text-sm font-bold text-[#0A2B70] flex items-center gap-2">
+                          <BookOpen className="w-4 h-4 text-[#0047F6]" /> Chương trình quan tâm
+                        </label>
+                        <select className="w-full rounded-xl border-gray-200 bg-gray-50 focus:bg-white focus:border-[#0047F6] focus:ring-2 focus:ring-[#0047F6]/20 transition-all text-sm p-4 outline-none font-medium text-gray-800 appearance-none">
+                          <option value="">Chọn chương trình</option>
+                          <option>Khoa học Thực hành & Nâng cao</option>
+                          <option>Kỳ thi Chuẩn hoá Quốc tế (SAT/AP/A-Level)</option>
+                          <option>Dự án Nghiên cứu Khoa học</option>
+                          <option>Thực tập & Định hướng Du học</option>
+                        </select>
+                      </div>
 
-<div className="bg-white rounded-xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-<div className="aspect-video relative">
-<img alt="Students in international lab" className="w-full h-full object-cover" data-alt="Group of students working in chemistry lab" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyaB71x6p_zC09VxdUPdag3KpVpjzY30K7ZI_yMKvX6lM382L3_pz9UojdMl36tpSCA6igir212txJR3lS7riFzC6KTvxl46NvgeGilZDCOtaU437KxbR9LvwPcYCU_oACuN_5BxNE_A69DgubLxG3DvSa0xQ90VR9Yj6VMPyugfqtiLXep8mpcuaLfdc39YmiJa-zqAXTbcg7Gkll9l3-h29jlyTRTHQRZiMdJVpu3Ifut6yjWOq2xQM6_uNFiVpSY9bH_glKLVc"/>
-<div className="absolute top-4 left-4 bg-accent-green text-white text-[10px] font-bold px-2 py-1 rounded">IVY LEAGUE</div>
-</div>
-<div className="p-6">
-<h4 className="text-lg font-bold text-primary mb-2">Học bổng Harvard University</h4>
-<p className="text-sm text-slate-600">Cựu học viên SAT Elite khóa 2022 xuất sắc giành học bổng toàn phần.</p>
-</div>
-</div>
+                      <div className="grid md:grid-cols-2 gap-6">
+                        <div className="space-y-2">
+                          <label className="text-sm font-bold text-[#0A2B70] flex items-center gap-2">
+                            <MapPin className="w-4 h-4 text-[#0047F6]" /> Cơ sở mong muốn
+                          </label>
+                          <select className="w-full rounded-xl border-gray-200 bg-gray-50 focus:bg-white focus:border-[#0047F6] focus:ring-2 focus:ring-[#0047F6]/20 transition-all text-sm p-4 outline-none font-medium text-gray-800 appearance-none">
+                            <option>Sảnh A - Imperia Garden (Thanh Xuân)</option>
+                            <option>Cơ sở ĐH Ngoại Thương</option>
+                            <option>Học Online (Trực tuyến)</option>
+                          </select>
+                        </div>
+                        <div className="space-y-2">
+                          <label className="text-sm font-bold text-[#0A2B70] flex items-center gap-2">
+                            <Clock className="w-4 h-4 text-[#0047F6]" /> Thời gian rảnh
+                          </label>
+                          <select className="w-full rounded-xl border-gray-200 bg-gray-50 focus:bg-white focus:border-[#0047F6] focus:ring-2 focus:ring-[#0047F6]/20 transition-all text-sm p-4 outline-none font-medium text-gray-800 appearance-none">
+                            <option>Sáng cuối tuần</option>
+                            <option>Chiều cuối tuần</option>
+                            <option>Tối các ngày trong tuần</option>
+                          </select>
+                        </div>
+                      </div>
 
-<div className="bg-white rounded-xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-<div className="aspect-video relative">
-<img alt="Students presenting project" className="w-full h-full object-cover" data-alt="Students presenting scientific research poster" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDicZ9XoaXFc8X2xpwEJLmovuRdfAkTXGEFdNaI7bJ5XqnfRunrkF5sp6tpZekjD-6d2vnhjkuMerUFrx-SbZXUZEZvEoWe2c6bUzqcKqx2wGl-KWJfztTU1CDt31rNyNROX0epfLM_yeFy3uNfWVdD4AxJYIwAWd0B-z7wL8gMUYT8vGopDed7U7b1PRWIQr9XDsFG1WsjDBi3_HP67HzPwt9X_Me745r5hzMfT0mkTtI5OTcG9RZeSkBx_tSwLKNgO9TGaoDsGtk"/>
-<div className="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded">RESEARCH</div>
-</div>
-<div className="p-6">
-<h4 className="text-lg font-bold text-primary mb-2">Published Paper at 17</h4>
-<p className="text-sm text-slate-600">Công bố nghiên cứu trên tạp chí Khoa học Quốc tế từ dự án Research Camp.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
+                      <button type="submit" className="w-full bg-[#0047F6] text-white py-4.5 rounded-full font-bold text-lg hover:bg-[#05297A] hover:scale-[1.02] transition-all shadow-lg shadow-[#0047F6]/30 mt-6 flex items-center justify-center gap-2">
+                        Xác nhận Đăng ký <Sparkles className="w-5 h-5"/>
+                      </button>
 
-<section className="py-24 bg-white">
-<div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-<h2 className="text-3xl font-extrabold text-primary text-center mb-12">Frequently Asked Questions</h2>
-<div className="space-y-4">
-<div className="border border-slate-200 rounded-xl p-6 hover:bg-slate-50 transition-colors cursor-pointer group">
-<div className="flex justify-between items-center">
-<h4 className="font-bold text-primary">Lớp học thử có mất phí không?</h4>
-<span className="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">expand_more</span>
-</div>
-<p className="mt-4 text-slate-600 text-sm">Buổi trải nghiệm đầu tiên hoàn toàn miễn phí cho học sinh đăng ký qua website lần đầu, giúp các em khám phá định hướng phù hợp.</p>
-</div>
-<div className="border border-slate-200 rounded-xl p-6 hover:bg-slate-50 transition-colors cursor-pointer group">
-<div className="flex justify-between items-center">
-<h4 className="font-bold text-primary">Cần chuẩn bị gì cho buổi học trải nghiệm?</h4>
-<span className="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">expand_more</span>
-</div>
-<p className="mt-4 text-slate-600 text-sm">GSJ cung cấp toàn bộ dụng cụ thí nghiệm và tài liệu. Học sinh chỉ cần mang theo tinh thần ham học hỏi và sổ ghi chép cá nhân.</p>
-</div>
-<div className="border border-slate-200 rounded-xl p-6 hover:bg-slate-50 transition-colors cursor-pointer group">
-<div className="flex justify-between items-center">
-<h4 className="font-bold text-primary">Lịch học thử được sắp xếp như thế nào?</h4>
-<span className="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">expand_more</span>
-</div>
-<p className="mt-4 text-slate-600 text-sm">Sau khi đăng ký, tư vấn viên sẽ gọi điện xác nhận và sắp xếp lịch phù hợp với thời gian biểu của học sinh trong vòng 24 giờ.</p>
-</div>
-</div>
-</div>
-</section>
+                      <p className="text-center text-xs text-gray-500 font-medium pt-2">
+                        Bằng việc nhấn đăng ký, bạn đồng ý với <Link href="#" className="underline text-[#0047F6]">Điều khoản</Link> và <Link href="#" className="underline text-[#0047F6]">Chính sách Bảo mật</Link> của GSJ.
+                      </p>
+                    </form>
+                  </>
+                )}
 
-<footer className="bg-primary text-slate-300 py-16">
-<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div className="grid md:grid-cols-4 gap-12 mb-12 border-b border-white/10 pb-12">
-<div className="col-span-1 md:col-span-1">
-<div className="flex items-center gap-3 mb-6">
-<div className="w-8 h-8 bg-white/10 flex items-center justify-center rounded-lg">
-<span className="material-symbols-outlined text-white text-xl">science</span>
-</div>
-<h2 className="text-white font-bold text-xl">GSJ</h2>
-</div>
-<p className="text-sm leading-relaxed">Hành trình khoa học toàn cầu kiến tạo những nhà lãnh đạo tương lai thông qua giáo dục thực nghiệm chuẩn quốc tế.</p>
-<div className="flex gap-4 mt-6">
-<a className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/20 transition-colors" href="#"><span className="material-symbols-outlined text-sm">social_leaderboard</span></a>
-<a className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/20 transition-colors" href="#"><span className="material-symbols-outlined text-sm">share</span></a>
-<a className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/20 transition-colors" href="#"><span className="material-symbols-outlined text-sm">alternate_email</span></a>
-</div>
-</div>
-<div>
-<h5 className="text-white font-bold mb-6">Quick Links</h5>
-<ul className="space-y-4 text-sm">
-<li><a className="hover:text-accent-green transition-colors" href="#">Academic Programs</a></li>
-<li><a className="hover:text-accent-green transition-colors" href="#">Research Opportunities</a></li>
-<li><a className="hover:text-accent-green transition-colors" href="#">Student Life</a></li>
-<li><a className="hover:text-accent-green transition-colors" href="#">Scholarships</a></li>
-</ul>
-</div>
-<div>
-<h5 className="text-white font-bold mb-6">Programs</h5>
-<ul className="space-y-4 text-sm">
-<li><a className="hover:text-accent-green transition-colors" href="#">SAT Elite</a></li>
-<li><a className="hover:text-accent-green transition-colors" href="#">Practical Science</a></li>
-<li><a className="hover:text-accent-green transition-colors" href="#">Career Camp</a></li>
-<li><a className="hover:text-accent-green transition-colors" href="#">Ecosystem Pages</a></li>
-</ul>
-</div>
-<div>
-<h5 className="text-white font-bold mb-6">Contact Us</h5>
-<ul className="space-y-4 text-sm">
-<li className="flex gap-3">
-<span className="material-symbols-outlined text-accent-green text-sm">location_on</span>
-                            123 Academic Way, District 1, HCMC
-                        </li>
-<li className="flex gap-3">
-<span className="material-symbols-outlined text-accent-green text-sm">call</span>
-                            +84 28 1234 5678
-                        </li>
-<li className="flex gap-3">
-<span className="material-symbols-outlined text-accent-green text-sm">mail</span>
-                            admissions@gsj.edu.vn
-                        </li>
-</ul>
-</div>
-</div>
-<div className="flex flex-col md:flex-row justify-between items-center gap-6 text-xs font-medium">
-<p>© 2024 Global Science Journey. All rights reserved.</p>
-<div className="flex gap-8">
-<a className="hover:text-white transition-colors" href="#">Privacy Policy</a>
-<a className="hover:text-white transition-colors" href="#">Terms of Service</a>
-<a className="hover:text-white transition-colors" href="#">Sitemap</a>
-</div>
-</div>
-</div>
-</footer>
+              </div>
+            </motion.div>
 
-    </>
+          </div>
+        </div>
+      </section>
+
+      {/* 2. VALUE PROPOSITION */}
+      <section className="py-24 bg-white border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
+            <h2 className="text-3xl md:text-[40px] font-black text-[#0A2B70] uppercase">Tại sao nên chọn <span className="text-[#0047F6]">GSJ?</span></h2>
+            <p className="mt-4 text-lg text-gray-600 font-medium max-w-2xl mx-auto">Hệ sinh thái giáo dục toàn diện, kết hợp giữa triết lý học thuật tiêu chuẩn toàn cầu và năng lực thực thi thế kỷ 21.</p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-12">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="text-center bg-gray-50 p-10 rounded-[2rem] border border-gray-100 hover:border-[#0047F6]/30 hover:shadow-xl transition-all group">
+              <div className="w-20 h-20 bg-white shadow-md text-[#0047F6] rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 group-hover:rotate-3 transition-transform">
+                <BookOpen className="w-10 h-10" />
+              </div>
+              <h3 className="text-xl font-bold text-[#0A2B70] mb-3">Chương trình<br/>Tiêu chuẩn Quốc tế</h3>
+              <p className="text-gray-600 font-medium text-[15px]">Giáo trình được thiết kế chuẩn hóa, phù hợp cho học sinh muốn chinh phục các trường Đại học Top đầu.</p>
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="text-center bg-gray-50 p-10 rounded-[2rem] border border-gray-100 hover:border-[#0047F6]/30 hover:shadow-xl transition-all group">
+              <div className="w-20 h-20 bg-[#0047F6] shadow-md text-white rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 group-hover:-rotate-3 transition-transform">
+                <GraduationCap className="w-10 h-10" />
+              </div>
+              <h3 className="text-xl font-bold text-[#0A2B70] mb-3">Đội ngũ Mentor<br/>Hàng đầu</h3>
+              <p className="text-gray-600 font-medium text-[15px]">Giảng viên là các Tiến sĩ, Thạc sĩ xuất sắc từ các trường đại học Ivy League Mỹ, Anh, Úc.</p>
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="text-center bg-gray-50 p-10 rounded-[2rem] border border-gray-100 hover:border-[#0047F6]/30 hover:shadow-xl transition-all group">
+              <div className="w-20 h-20 bg-white shadow-md text-[#0047F6] rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 group-hover:rotate-3 transition-transform">
+                <FlaskConical className="w-10 h-10" />
+              </div>
+              <h3 className="text-xl font-bold text-[#0A2B70] mb-3">Môi trường<br/>Thực hành Chuyên nghiệp</h3>
+              <p className="text-gray-600 font-medium text-[15px]">Học sinh được cọ xát trực tiếp tại các phòng thí nghiệm, doanh nghiệp đa quốc gia và viện nghiên cứu.</p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. CHĂM SÓC KHÁCH HÀNG / FAQ QUICK */}
+      <section className="py-24 bg-[#FAFAFA] border-t border-gray-200">
+        <div className="max-w-4xl mx-auto px-6 lg:px-10">
+          <div className="text-center mb-16">
+             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#0047F6]/10 text-[#0047F6] mb-6 shadow-sm">
+                <CalendarHeart className="w-8 h-8" />
+             </div>
+             <h2 className="text-3xl font-black text-[#0A2B70] uppercase">Bạn cần hỗ trợ thêm?</h2>
+             <p className="mt-4 text-lg text-gray-600 font-medium">Đội ngũ Tuyển sinh GSJ luôn sẵn sàng giải đáp.</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6 pb-8">
+             <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100 flex flex-col items-center text-center">
+                <Phone className="w-8 h-8 text-[#0047F6] mb-4" />
+                <h4 className="font-bold text-[#0A2B70] text-lg mb-2">Gọi điện ngay</h4>
+                <p className="text-gray-500 text-sm font-medium mb-4">Hotline hỗ trợ 24/7</p>
+                <a href="tel:0327326655" className="text-xl font-black text-[#0047F6]">0327.326.655</a>
+             </div>
+             <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100 flex flex-col items-center text-center">
+                <Mail className="w-8 h-8 text-[#0047F6] mb-4" />
+                <h4 className="font-bold text-[#0A2B70] text-lg mb-2">Gửi Email</h4>
+                <p className="text-gray-500 text-sm font-medium mb-4">Chúng tôi sẽ phản hồi trong 2 giờ làm việc</p>
+                <a href="mailto:info@gsj.edu.vn" className="text-lg font-bold text-[#0047F6]">info@gsj.edu.vn</a>
+             </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
   );
 }

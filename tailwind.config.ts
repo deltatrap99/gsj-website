@@ -9,18 +9,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "gsj-navy": "#002147",
+        "gsj-brand-blue": "#003BE6", // The vibrant electric blue from the brochure
+        "gsj-brand-blue-dark": "#002BB3",
+        "gsj-brand-blue-light": "#336AF9",
+        "gsj-accent-cyan": "#00E0FF", // The light cyan from the age badge
         "gsj-gold": "#D4AF37",
-        "gsj-gold-light": "#E5C563",
-        "background-light": "#FFFFFF",
-        "background-soft": "#F9FAFB",
-        "primary": "#003366",
-        "secondary": "#775a19",
-        "accent": "#D4AF37",
-        "accent-green": "#C5A059",
+        "gsj-white": "#FFFFFF",
+        "gsj-gray": "#F4F7FB",
+        "gsj-text": "#1A2530",
+        "gsj-text-secondary": "#57667A",
       },
       fontFamily: {
-        "sans": ["Inter", "sans-serif"],
+        "sans": ["var(--font-sans)", "Inter", "sans-serif"],
         "serif": ["Playfair Display", "serif"],
       },
     },

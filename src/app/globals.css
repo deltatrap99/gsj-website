@@ -1,62 +1,60 @@
 @import "tailwindcss";
 
+@theme {
+  --color-gsj-brand-blue: #003BE6;
+  --color-gsj-brand-blue-dark: #002BB3;
+  --color-gsj-brand-blue-light: #336AF9;
+  --color-gsj-accent-cyan: #00E0FF;
+  --color-gsj-gold: #D4AF37;
+  --color-gsj-white: #FFFFFF;
+  --color-gsj-gray: #F4F7FB;
+  --color-gsj-text: #1A2530;
+  --color-gsj-text-secondary: #57667A;
 
+  --font-sans: var(--font-inter), "Inter", sans-serif;
+  --font-serif: var(--font-playfair), "Playfair Display", serif;
+}
 
 @layer base {
-  :root {
-    --gsj-navy: #002147;
-    --gsj-gold: #D4AF37;
-    --gsj-gold-light: #E5C563;
-    --background-light: #FFFFFF;
-    --background-soft: #F9FAFB;
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--color-gsj-gray);
+    color: var(--color-gsj-text);
+  }
+
+  ::selection {
+    background: var(--color-gsj-brand-blue);
+    color: white;
   }
 }
 
-.glass-header { 
-    background: rgba(255, 255, 255, 0.85); 
-    backdrop-filter: blur(12px); 
-    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+/* ===== Section Divider ===== */
+.section-divider {
+  width: 60px;
+  height: 4px;
+  background: var(--color-gsj-brand-blue);
+  border-radius: 2px;
 }
 
-.text-gold-gradient {
-    background: linear-gradient(to right, #D4AF37, #F1D676, #D4AF37);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    background-size: 200% auto;
-    animation: shine 4s linear infinite;
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-@keyframes shine {
-    to {
-        background-position: 200% center;
-    }
+::-webkit-scrollbar-track {
+  background: #F5F7FA;
 }
 
-.gold-border-glow {
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
-    border: 1px solid rgba(212, 175, 55, 0.3);
+::-webkit-scrollbar-thumb {
+  background: #003BE6;
+  border-radius: 4px;
 }
 
-.gold-border-glow:hover {
-    box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
-    border-color: #D4AF37;
-}
-
-@keyframes growWidth {
-    0% { width: 0; }
-    100% { width: 100%; }
-}
-
-@keyframes pulseGold {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
-    70% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); }
-}
-
-.animate-grow-width {
-    animation: growWidth 3s ease-out forwards;
-}
-
-.animate-pulse-gold {
-    animation: pulseGold 2s infinite;
+::-webkit-scrollbar-thumb:hover {
+  background: #002BB3;
 }
