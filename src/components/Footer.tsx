@@ -46,6 +46,7 @@ export function Footer() {
             <li><Link href="/about" className="text-gray-400 hover:text-white transition-colors flex items-center group font-medium"><span className="w-0 overflow-hidden group-hover:w-5 transition-all text-[#0047F6]"><ChevronRight size={18}/></span> Về GSJ</Link></li>
             <li><Link href="/research" className="text-gray-400 hover:text-white transition-colors flex items-center group font-medium"><span className="w-0 overflow-hidden group-hover:w-5 transition-all text-[#0047F6]"><ChevronRight size={18}/></span> Hệ sinh thái</Link></li>
             <li><Link href="/achievements" className="text-gray-400 hover:text-white transition-colors flex items-center group font-medium"><span className="w-0 overflow-hidden group-hover:w-5 transition-all text-[#0047F6]"><ChevronRight size={18}/></span> Hành trình tự hào</Link></li>
+            <li><Link href="/blog" className="text-gray-400 hover:text-white transition-colors flex items-center group font-medium"><span className="w-0 overflow-hidden group-hover:w-5 transition-all text-[#0047F6]"><ChevronRight size={18}/></span> Blog</Link></li>
           </ul>
         </div>
 

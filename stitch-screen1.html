@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Global Science Journey - GSJ</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,700;0,900;1,400;1,700;1,900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#757682",
+                    "on-surface": "#181c1f",
+                    "error": "#ba1a1a",
+                    "secondary": "#003cd4",
+                    "error-container": "#ffdad6",
+                    "on-error": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-primary": "#b4c5ff",
+                    "on-surface-variant": "#444651",
+                    "primary-fixed": "#dbe1ff",
+                    "on-tertiary-fixed": "#261a00",
+                    "primary": "#00174a",
+                    "on-secondary-container": "#e4e6ff",
+                    "surface-bright": "#f7f9fd",
+                    "on-tertiary-fixed-variant": "#5b4300",
+                    "tertiary": "#251900",
+                    "outline-variant": "#c5c6d2",
+                    "surface-container-low": "#f2f4f8",
+                    "inverse-surface": "#2d3134",
+                    "on-primary-fixed": "#00174b",
+                    "on-background": "#181c1f",
+                    "secondary-fixed": "#dde1ff",
+                    "tertiary-container": "#3f2d00",
+                    "on-secondary-fixed-variant": "#0035be",
+                    "surface-tint": "#425ba1",
+                    "surface-container-highest": "#e0e3e6",
+                    "inverse-on-surface": "#eff1f5",
+                    "on-tertiary-container": "#c09000",
+                    "on-secondary-fixed": "#001356",
+                    "on-primary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "surface": "#f7f9fd",
+                    "on-primary-fixed-variant": "#284388",
+                    "surface-container": "#eceef2",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed-dim": "#b8c3ff",
+                    "surface-container-high": "#e6e8ec",
+                    "on-error-container": "#93000a",
+                    "on-primary-container": "#7d95e0",
+                    "background": "#f7f9fd",
+                    "tertiary-fixed": "#ffdf9e",
+                    "primary-container": "#0a2b70",
+                    "secondary-container": "#2054ff",
+                    "surface-dim": "#d8dade",
+                    "surface-variant": "#e0e3e6",
+                    "tertiary-fixed-dim": "#fabd00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {},
+            "fontFamily": {
+                    "headline": [
+                            "Be Vietnam Pro"
+                    ],
+                    "display": [
+                            "Be Vietnam Pro"
+                    ],
+                    "body": [
+                            "Be Vietnam Pro"
+                    ],
+                    "label": [
+                            "Be Vietnam Pro"
+                    ]
+            },
+            "fontSize": {}
+    },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Be Vietnam Pro', sans-serif; background-color: theme('colors.surface'); color: theme('colors.on-surface'); }
+        .ambient-shadow { box-shadow: 0 10px 32px -4px rgba(0, 23, 74, 0.04), 0 4px 16px -4px rgba(0, 23, 74, 0.04); }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl docked full-width top-0 sticky border-b border-slate-200/10 dark:border-slate-800/10 shadow-sm dark:shadow-none font-be-vietnam-pro body-md z-50">
+<div class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto w-full">
+<!-- Brand -->
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-blue-700 dark:text-blue-400 text-3xl" style="font-variation-settings: 'FILL' 1;">explore</span>
+<div class="flex flex-col">
+<span class="text-2xl font-black italic tracking-tighter text-blue-900 dark:text-blue-100">GSJ</span>
+<span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider hidden md:block">Global Science Journey</span>
+</div>
+</div>
+<!-- Nav Links -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-blue-700 dark:text-blue-400 font-bold border-b-2 border-blue-700 pb-1" href="#">Trang chủ</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-700 hover:text-blue-600 dark:hover:text-blue-300 transition-colors duration-300 pb-1" href="#">Về GSJ</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-700 hover:text-blue-600 dark:hover:text-blue-300 transition-colors duration-300 flex items-center gap-1 pb-1" href="#">Hệ sinh thái <span class="material-symbols-outlined text-sm">expand_more</span></a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-700 hover:text-blue-600 dark:hover:text-blue-300 transition-colors duration-300 pb-1" href="#">Hành trình tự hào</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-700 hover:text-blue-600 dark:hover:text-blue-300 transition-colors duration-300 pb-1" href="#">Blog</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<button class="hidden lg:flex items-center gap-2 px-6 py-2.5 rounded-full border-2 border-outline-variant text-secondary font-bold hover:bg-secondary-fixed transition-colors duration-300">
+<span class="material-symbols-outlined text-lg">call</span>
+                    Bắt đầu ngay
+                </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative w-full overflow-hidden" style="min-height: 80vh;">
+<div class="absolute inset-0 z-0">
+<img alt="Hero Background" class="w-full h-full object-cover" data-alt="Group of diverse university students smiling and walking across a sunny green campus with classic academic buildings in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDihYEeQB6tMAnnuHiYbeNOF07cYwiSBIH4h4EZxOQY1BDkdPDy1ZfyoSKbLt5iVJI_Kj3F54YiXpEPOxdcd3Gzj04Bsv53WAVEHmjUtwSGX8QwZm17cif2wyVwsnZKTXk6IoVDkx-THWF1mEx2zRnlMlq635b0x-es2XOTlQbgCaijyJQvSHPWt3Kwd6FjfojdO9CaNlNhNi81I1NNiWe7DChNT_tRz5NVqbt3THgfru91lAeP0zqoGYqV0sHKlY1G7AwJjboG_Ws"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary-container via-primary-container/90 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 h-full flex flex-col justify-center py-24 md:py-32">
+<div class="max-w-3xl">
+<h1 class="text-5xl md:text-6xl font-black uppercase italic tracking-tight text-white mb-2 leading-tight">
+                        XÂY DỰNG CHIẾN LƯỢC TRÚNG TUYỂN ĐẠI HỌC
+                    </h1>
+<h2 class="text-4xl md:text-5xl font-black italic text-tertiary-fixed-dim mb-6">
+                        TOP ĐẦU THẾ GIỚI
+                    </h2>
+<p class="text-on-primary-container text-lg md:text-xl mb-10 max-w-2xl leading-relaxed">
+                        GSJ đồng hành cùng học sinh Việt Nam kiến tạo hồ sơ học thuật xuất sắc, định hướng nghiên cứu khoa học chuyên sâu và xây dựng lộ trình chinh phục các trường Đại học danh giá toàn cầu với đội ngũ chuyên gia tận tâm.
+                    </p>
+<div class="flex flex-col sm:flex-row items-center gap-8">
+<button class="px-8 py-4 bg-gradient-to-br from-secondary to-primary-container text-white rounded-full font-bold shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 flex items-center gap-2">
+                            Tư Vấn 1-1 Cùng Chuyên Gia
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<div class="flex items-center gap-4">
+<div class="flex -space-x-4">
+<img alt="Student 1" class="w-12 h-12 rounded-full border-2 border-primary-container object-cover" data-alt="Portrait of a young smiling asian female student looking confident" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhEBH6W9zUVDzOIQpfHncUJ5aJ3QSypPf5YJ2_TVLjIi2b957cIN27LVNRSBpL1fVarNHRGgAU1pXkf6PuJ20KFLo4oO2iRm3c_ulNSL8t0x-s5HspyQLnD5c7m1uKfRvEAy7KssIHwV0R_P2oFgz3LXlniRgAWB7otLVsi4WaCFDiCN_eGcDZM6Pdbd8MFXi3F_kFQIDXC4Wqt8mfk28FcP6JBACaHKVRFGtrxTqo8lRG7edUGU4Ee9OjaVTL2x6Bnpi32-XhcQE"/>
+<img alt="Student 2" class="w-12 h-12 rounded-full border-2 border-primary-container object-cover" data-alt="Portrait of a young asian male student smiling wearing casual clothes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0-Vw3I2SMIWkXL9xv34C3SpSRUqpgd75bfiVnTe8dXhxuKXo7rALwnvQ3RQAmy2hwXPP4yKWES7qAu8ns8dTuXerCK0CM3IZCwInAINIt0SP1gcSFr1UwqpyCaD-B5f0iapRNPPwVUupzxey6zbi2oSlwhYvrBM8dzz7qFVpVRYQq-ysNaA0KopMKAQr_1BJK_ULJt72U1RC_cYj9VQHP3UxS23ndgFrOdwPsPm9EP4TpLT6G1Sw13AKTBJMgenT70rdDU2RWKp8"/>
+<img alt="Student 3" class="w-12 h-12 rounded-full border-2 border-primary-container object-cover" data-alt="Portrait of a female student with glasses looking directly at camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjaE1c6QFgFNEc4we8-G0ovP5ExMRRjWEUYJPtInCekLXZUJsWiOC7WWS5J95p5TfBsHIZOkWULKjbBFmIS16-6pzWRAlXymmWHTdA1XfyQmGwf7gBmoAv2nqBfZrxsDW8-9QaKq_4vpmjIN7nR2qYijjIZumpHUb8OFT0_rjVEA5eGHoQFH9X7o1GE3ma3Imo5TossyL4uE0XUgYrsCFgGeLU3HgjWQssnc4vFcE-9D8n8_2pDEmM6cAAIc4j1XadaHqLjYeNDKo"/>
+<div class="w-12 h-12 rounded-full border-2 border-primary-container bg-surface-container-low flex items-center justify-center text-primary font-bold text-sm">
+                                    +500
+                                </div>
+</div>
+<span class="text-white text-sm font-medium max-w-[120px] leading-tight">500+ học sinh đã đồng hành cùng GSJ</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid Section -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Column 1: Founder Story -->
+<div class="lg:col-span-4 bg-surface-container-lowest rounded-xl p-8 ambient-shadow flex flex-col h-full">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-secondary">history_edu</span>
+<h3 class="text-xl font-bold text-primary">Câu chuyện sáng lập GSJ</h3>
+</div>
+<div class="flex-grow flex flex-col items-center text-center">
+<div class="relative mb-6">
+<img alt="Founder" class="w-32 h-32 rounded-full object-cover ring-4 ring-tertiary-fixed-dim/20" data-alt="Professional portrait of asian businesswoman wearing a blazer, smiling warmly in a bright office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtHTPsthhM0mpOYvuCWfbCWPSAbBNImf-ZPsb302bEMs9dWc2v9u-AhBiIUKz8oGvCLIk6iFYgL68GCA4w3IIMZayJY_Yo5rlvUwKhimzVKFwaLII7DKAgszyrb8fht81KOOO2vB6Hx97X24QBcXX7OEe91fNiYIjotHddPANkt0Yb1KHAjCUy7TixLoYvQ106AK548OL9AEACobGeGQ5-TCkBSguU7XCFM2c2SqPLBlFBkPOCiL6Nw94-_rnuidg6EUUTgjC-GSQ"/>
+<div class="absolute inset-0 rounded-full ring-2 ring-tertiary-fixed-dim m-[-4px]"></div>
+</div>
+<div class="border-l-4 border-secondary pl-6 text-left mb-6">
+<p class="text-on-surface-variant italic leading-relaxed text-lg">"Hành trình giáo dục không chỉ là đích đến, mà là quá trình khai phá tiềm năng vô hạn của mỗi học sinh Việt Nam trên bản đồ tri thức toàn cầu."</p>
+</div>
+<div class="mt-auto pt-6 text-left w-full border-t border-surface-variant/50">
+<p class="font-bold text-primary">ThS. Dược sĩ Nguyễn Thị Hằng</p>
+<p class="text-sm text-on-surface-variant">Founder &amp; CEO GSJ</p>
+</div>
+</div>
+</div>
+<!-- Column 2: Programs -->
+<div class="lg:col-span-4 bg-surface-container-lowest rounded-xl p-8 ambient-shadow h-full flex flex-col">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-secondary">school</span>
+<h3 class="text-xl font-bold text-primary">Chương trình nổi bật</h3>
+</div>
+<div class="grid grid-cols-2 gap-4 flex-grow">
+<!-- Program 1 -->
+<div class="relative group rounded-lg overflow-hidden isolate cursor-pointer h-32">
+<img alt="Nghiên cứu" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Microscope in a modern science laboratory with blue tint lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAucKH8sjmIVRqd1jFHvH0jhriugTxvN6nxNK_oe6ZV8khMnmR9wi0pFzpao95X2d74i56ID1x6qc64r8PtYVCzt-agxlKlHfhw1BwH4HPdkt8BiDONNAw1dOK-zHnxZ3M76aDfhiMN-Y7VVk7VCICTvibxe0m7-Vasy0QobwR7MWS_b2wRfI2IZZT9KxyzoHTDWVdmpbdCa40uFA30XHqWhOO7jZ_6BHS7dBbTg-bPU0YZYGwiXgQE9vgArfeDiV9mm1-WqbLSE7A"/>
+<div class="absolute inset-0 bg-primary/60 group-hover:bg-primary/40 transition-colors"></div>
+<div class="absolute inset-0 p-4 flex flex-col justify-end">
+<h4 class="text-white font-bold text-sm mb-1">Nghiên cứu Khoa học</h4>
+<span class="text-tertiary-fixed-dim text-xs flex items-center opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">Tìm hiểu thêm <span class="material-symbols-outlined text-[10px] ml-1">arrow_forward</span></span>
+</div>
+</div>
+<!-- Program 2 -->
+<div class="relative group rounded-lg overflow-hidden isolate cursor-pointer h-32">
+<img alt="Thực hành" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Students conducting experiments in a lab wearing safety goggles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlOZLqIhKt6LKjnIkHZD04KXXFU0ZgMrqbJQrj-8Tawd4Wrdok-3HLu5JOcOJ1u57SZhO9kLsOcQ9uIPUAhOJTXQ0tn-LEWt8Q4FkOWhQ1PUyacyPrgS58FrWX-ZHh5Qbj18-ej0KSs26oXb9H2FO2WWqII0kape8sJnyaY0w_xMNZmoT3Roh5gY941UseqVv7hBkiDNe_3ScqY5YiPARiVQs4spHfjiBMrhumMuxippUJSMcX_hVj2flaps_4F3cO6bZooEfP5f4"/>
+<div class="absolute inset-0 bg-primary/60 group-hover:bg-primary/40 transition-colors"></div>
+<div class="absolute inset-0 p-4 flex flex-col justify-end">
+<h4 class="text-white font-bold text-sm mb-1">Khoa học Thực hành</h4>
+<span class="text-tertiary-fixed-dim text-xs flex items-center opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">Tìm hiểu thêm <span class="material-symbols-outlined text-[10px] ml-1">arrow_forward</span></span>
+</div>
+</div>
+<!-- Program 3 -->
+<div class="relative group rounded-lg overflow-hidden isolate cursor-pointer h-32">
+<img alt="ABS" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Student writing in a notebook on a wooden desk with a laptop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnmh3RT-PpMOu-9aJUCiF82dKqqjdUCyDwqCPvIMgpK3wnMv7cxWtq3QdFgKU3iWphnsMMDvfHzViMSPSTPj0P78ZffTw11mfCPTZc0E-d9B8sEP0RIM-jBasbjLqqxkN6g-Q20_wMBbqrrAqqXwZ4YYGEmq6vkMa1UoWvfBgw_VKU-emzIJbo19BsIUJ3Oe2pzXIoj7vMNoIUpt9js0MHT18jzk1BgYagtrX--Be0INHdHaHBOaL0sntuiUMkAR427nuOfz9yTAc"/>
+<div class="absolute inset-0 bg-primary/60 group-hover:bg-primary/40 transition-colors"></div>
+<div class="absolute inset-0 p-4 flex flex-col justify-end">
+<h4 class="text-white font-bold text-sm mb-1">Dự án ABS</h4>
+<span class="text-tertiary-fixed-dim text-xs flex items-center opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">Tìm hiểu thêm <span class="material-symbols-outlined text-[10px] ml-1">arrow_forward</span></span>
+</div>
+</div>
+<!-- Program 4 -->
+<div class="relative group rounded-lg overflow-hidden isolate cursor-pointer h-32">
+<img alt="SAT" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Group of students studying together in a library setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBR6_2KWQ78_hhhnMKkCMvzERwjrmkZNfovvI6NsCceuyOiUJp4Xkdin8flYAD0_nuQL4o8ne_LhHoZT6dRYh7K8PEan8exgGfZsii4Z7Hd0WnJIWbkm4mgjzF4AVOT7qI0lZ84aztbhgoiG3Ezhp8FWVwrJ4e-8oNXswKi4oDSvsshM1TH95Q2jTMaLFGH9bhpg-8XC7kI2tU3RgQXKZPoJMZ9IMWy_DAvlzcXP3uYOmwwIzSTC3WWgpLIqB-1Nwh4sBtlZJFhgyo"/>
+<div class="absolute inset-0 bg-primary/60 group-hover:bg-primary/40 transition-colors"></div>
+<div class="absolute inset-0 p-4 flex flex-col justify-end">
+<h4 class="text-white font-bold text-sm mb-1">Du học &amp; SAT</h4>
+<span class="text-tertiary-fixed-dim text-xs flex items-center opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">Tìm hiểu thêm <span class="material-symbols-outlined text-[10px] ml-1">arrow_forward</span></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Column 3: Value Props & Stats -->
+<div class="lg:col-span-4 bg-surface-container-lowest rounded-xl p-8 ambient-shadow flex flex-col">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-secondary">verified</span>
+<h3 class="text-xl font-bold text-primary">Vì sao chọn GSJ?</h3>
+</div>
+<div class="grid grid-cols-2 gap-y-6 gap-x-4 mb-8">
+<div class="flex flex-col gap-2">
+<span class="material-symbols-outlined text-secondary-container bg-primary-fixed w-10 h-10 rounded-full flex items-center justify-center">psychology</span>
+<p class="text-sm font-medium text-on-surface-variant leading-tight">Đội ngũ chuyên gia hàng đầu</p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="material-symbols-outlined text-secondary-container bg-primary-fixed w-10 h-10 rounded-full flex items-center justify-center">route</span>
+<p class="text-sm font-medium text-on-surface-variant leading-tight">Lộ trình cá nhân hóa</p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="material-symbols-outlined text-secondary-container bg-primary-fixed w-10 h-10 rounded-full flex items-center justify-center">hub</span>
+<p class="text-sm font-medium text-on-surface-variant leading-tight">Hệ sinh thái toàn diện</p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="material-symbols-outlined text-secondary-container bg-primary-fixed w-10 h-10 rounded-full flex items-center justify-center">monitoring</span>
+<p class="text-sm font-medium text-on-surface-variant leading-tight">Kết quả đã được chứng minh</p>
+</div>
+</div>
+<div class="mt-auto grid grid-cols-2 gap-4 border-t border-surface-variant/50 pt-6">
+<div>
+<p class="text-3xl font-black text-primary">500+</p>
+<p class="text-xs text-on-surface-variant uppercase tracking-wider font-bold">Học viên</p>
+</div>
+<div>
+<p class="text-3xl font-black text-primary">95%</p>
+<p class="text-xs text-on-surface-variant uppercase tracking-wider font-bold">Đỗ Top 50</p>
+</div>
+<div>
+<p class="text-3xl font-black text-primary">200+</p>
+<p class="text-xs text-on-surface-variant uppercase tracking-wider font-bold">Chuyên gia</p>
+</div>
+<div>
+<p class="text-3xl font-black text-primary">$50M+</p>
+<p class="text-xs text-on-surface-variant uppercase tracking-wider font-bold">Học bổng</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 font-be-vietnam-pro text-sm font-bold text-blue-900 dark:text-blue-100 full-width py-12 flat no shadows max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between border-t border-slate-200/20 w-full mt-auto">
+<div class="mb-4 md:mb-0 text-slate-500 dark:text-slate-400">
+            © 2024 Global Science Journey. All rights reserved.
+        </div>
+<div class="flex gap-6">
+<a class="text-slate-500 dark:text-slate-400 hover:underline Default link behavior" href="#">Điều khoản</a>
+<a class="text-slate-500 dark:text-slate-400 hover:underline Default link behavior" href="#">Bảo mật</a>
+<a class="text-slate-500 dark:text-slate-400 hover:underline Default link behavior" href="#">Liên hệ</a>
+</div>
+</footer>
+</body></html>

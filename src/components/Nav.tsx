@@ -30,6 +30,7 @@ export function Nav() {
       ]
     },
     { name: "Hành trình tự hào", path: "/achievements" },
+    { name: "Blog", path: "/blog" },
   ];
 
   return (
@@ -55,9 +56,10 @@ export function Nav() {
         {/* Desktop Nav */}
         <div className="hidden lg:flex items-center gap-7">
           {links.map((link) => (
-            <div key={link.path} className="relative group py-2">
+            <div key={link.path} className="relative group py-4">
               <Link 
-                href={link.path} 
+                href={link.path}
+                onClick={link.subMenu ? (e: React.MouseEvent) => e.preventDefault() : undefined}
                 className="flex items-center gap-1 text-[#0A2B70] hover:text-[#0047F6] text-[15px] font-bold tracking-wide transition-colors relative"
               >
                 {link.name}
@@ -69,17 +71,19 @@ export function Nav() {
 
               {/* Dropdown Menu */}
               {link.subMenu && (
-                <div className="absolute top-full left-0 mt-3 w-64 bg-white rounded-2xl shadow-[0_20px_50px_rgba(0,30,120,0.1)] border border-gray-100 pt-2 pb-2 transition-all duration-300 origin-top pointer-events-none opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto">
-                  <div className="flex flex-col">
-                    {link.subMenu.map((sub, i) => (
-                       <Link 
-                         key={i} 
-                         href={sub.path} 
-                         className="px-6 py-3.5 font-bold text-gray-600 hover:text-[#0047F6] hover:bg-[#F4F7FF] transition-all flex items-center gap-3 relative before:absolute before:left-0 before:top-0 before:h-full before:w-1 before:bg-[#0047F6] before:rounded-r-full before:opacity-0 hover:before:opacity-100 border-b border-gray-50 last:border-0"
-                       >
-                         {sub.name}
-                       </Link>
-                    ))}
+                <div className="absolute top-full left-[-1rem] pt-2 w-64 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200">
+                  <div className="bg-white rounded-2xl shadow-[0_20px_50px_rgba(0,30,120,0.12)] border border-gray-100 py-2 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-200">
+                    <div className="flex flex-col">
+                      {link.subMenu.map((sub, i) => (
+                         <Link 
+                           key={i} 
+                           href={sub.path} 
+                           className="px-6 py-3.5 font-bold text-gray-600 hover:text-[#0047F6] hover:bg-[#F4F7FF] transition-all flex items-center gap-3 relative before:absolute before:left-0 before:top-0 before:h-full before:w-1 before:bg-[#0047F6] before:rounded-r-full before:opacity-0 hover:before:opacity-100 border-b border-gray-50 last:border-0"
+                         >
+                           {sub.name}
+                         </Link>
+                      ))}
+                    </div>
                   </div>
                 </div>
               )}
