@@ -14,73 +14,89 @@ const AboutHero = () => (
     {/* Background Decorative Elements */}
     <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#0047F6]/[0.04] rounded-full blur-3xl -translate-y-1/3 translate-x-1/4"></div>
     <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#0047F6]/[0.03] rounded-full blur-3xl translate-y-1/3 -translate-x-1/4"></div>
-    {/* Subtle dot pattern */}
     <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(#0047F6 1px, transparent 1px)", backgroundSize: "32px 32px" }}></div>
 
     <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-start">
         
         {/* Left Column - Text */}
-        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="lg:col-span-5 relative z-20">
-          <span className="inline-block px-5 py-2 rounded-full bg-[#0047F6] text-white text-[13px] font-bold uppercase tracking-[0.15em] mb-7 shadow-md">
-            Về GSJ
+        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="lg:col-span-5 relative z-20 pt-4">
+          <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#0047F6] text-white text-[13px] font-bold uppercase tracking-[0.15em] mb-7 shadow-md">
+            <Users className="w-4 h-4" /> Về GSJ
           </span>
-          
-          {/* Small decorative element */}
-          <div className="absolute top-8 right-0 hidden lg:block">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M20 0L22 18L40 20L22 22L20 40L18 22L0 20L18 18L20 0Z" fill="#0047F6" fillOpacity="0.1"/></svg>
-          </div>
 
-          <h1 className="text-4xl md:text-5xl lg:text-[56px] font-black text-[#0A2B70] mb-8 leading-[1.1] tracking-tight uppercase">
-            Khát vọng<br />vươn tầm<br />
-            <span className="text-[#0047F6]">Trí tuệ Việt</span>
+          <h1 className="text-3xl md:text-4xl lg:text-[44px] font-black text-[#0A2B70] mb-6 leading-[1.1] tracking-tight">
+            GSJ – Kiến tạo trí tuệ,<br />
+            <span className="text-[#0047F6] italic">dẫn lối tương lai</span>
           </h1>
-          <p className="text-[16px] text-gray-600 leading-[1.8] font-medium mb-10 max-w-md">
-            GSJ là cầu nối tri thức toàn cầu, kiến tạo môi trường học thuật chuyên nghiệp. Nơi học sinh không chỉ học mà còn nghiên cứu, khám phá và dẫn dắt tương lai.
+
+          <p className="text-[15px] text-gray-600 leading-[1.8] font-medium mb-8 max-w-lg">
+            GSJ là hệ sinh thái giáo dục chuyên sâu về kiến thức và kỹ năng, giúp học sinh Việt Nam xây dựng tư duy nghiên cứu, năng lực học thuật và bản lĩnh hội nhập – để tự tin chinh phục những đỉnh cao tri thức và tạo ra giá trị cho cộng đồng.
           </p>
 
-          <div className="flex flex-wrap items-center gap-4">
-            <Link href="/register" className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-[#0047F6] text-white rounded-full font-bold text-[15px] shadow-[0_4px_20px_rgba(0,71,246,0.3)] hover:shadow-[0_6px_30px_rgba(0,71,246,0.4)] hover:-translate-y-0.5 transition-all whitespace-nowrap">
-              <Target className="w-5 h-5 shrink-0" />
-              Khám phá hành trình GSJ
-            </Link>
-            <button className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-white text-[#0A2B70] rounded-full font-bold text-[15px] border-2 border-[#E0E8FF] hover:border-[#0047F6]/30 shadow-sm hover:shadow-md transition-all whitespace-nowrap">
-              <PlayCircle className="w-5 h-5 shrink-0 text-[#0047F6]" />
-              Xem video giới thiệu
-            </button>
+          {/* 3 Feature pills */}
+          <div className="flex flex-wrap gap-4 mb-8">
+            {[
+              { icon: BookOpen, title: "Giáo dục chuyên sâu", desc: "Chú trọng chiều sâu tri thức và tư duy học thuật" },
+              { icon: Globe, title: "Nghiên cứu thực tiễn", desc: "Học đi đôi với hành, giải quyết vấn đề thật của thế giới" },
+              { icon: Heart, title: "Phát triển toàn diện", desc: "Nâng cao năng lực cá nhân và bản lĩnh công dân toàn cầu" },
+            ].map((item, idx) => (
+              <div key={idx} className="flex items-start gap-2.5 bg-white/80 backdrop-blur-sm px-4 py-3 rounded-2xl border border-[#E0E8FF] shadow-sm min-w-[140px]">
+                <div className="w-8 h-8 rounded-full bg-[#0047F6] flex items-center justify-center shrink-0 mt-0.5">
+                  <item.icon className="w-4 h-4 text-white" />
+                </div>
+                <div>
+                  <p className="text-[13px] font-bold text-[#0A2B70] leading-tight">{item.title}</p>
+                  <p className="text-[11px] text-gray-500 font-medium leading-snug mt-0.5">{item.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </motion.div>
 
-        {/* Right Column - Image */}
+        {/* Right Column - Image + Quote */}
         <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="lg:col-span-7 relative">
-          {/* Blob / curved shape behind image */}
-          <div className="absolute -top-8 -right-8 -bottom-8 -left-4 bg-gradient-to-br from-[#D6E4FF] to-[#E8EFFF] rounded-[3rem] rotate-2 hidden lg:block"></div>
-          
           <div className="relative z-10">
             <div className="rounded-[2.5rem] overflow-hidden shadow-[0_20px_60px_rgba(0,33,71,0.12)] border-4 border-white aspect-[4/3] lg:aspect-[16/11] bg-gray-100">
-              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071" className="w-full h-full object-cover object-[center_35%]" alt="GSJ Academic Environment" />
+              <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=2071" className="w-full h-full object-cover" alt="GSJ Academic Environment" />
             </div>
 
-            {/* Floating Card - Top Right */}
-            <div className="absolute -top-2 -right-2 lg:top-6 lg:-right-4 bg-white rounded-2xl px-5 py-4 shadow-[0_12px_40px_rgba(0,23,74,0.12)] border border-[#E0E8FF] z-20 flex items-center gap-3">
-              <div className="w-11 h-11 rounded-full bg-[#0047F6] flex items-center justify-center shrink-0 shadow-md">
-                <Globe className="w-5 h-5 text-white" />
-              </div>
-              <div>
-                <p className="text-[14px] font-black text-[#0A2B70] leading-tight">Kiến tạo tương lai</p>
-                <p className="text-[12px] text-gray-500 font-medium">Bằng tri thức và<br />sự tử tế</p>
-              </div>
-            </div>
-
-            {/* Small floating element - Bottom Right */}
-            <div className="absolute -bottom-3 right-8 lg:-bottom-4 lg:right-12 bg-[#0047F6] w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg z-20 rotate-6">
-              <GraduationCap className="w-7 h-7 text-white" />
+            {/* Quote Card - Bottom Right */}
+            <div className="absolute -bottom-6 right-4 lg:-bottom-8 lg:right-6 bg-[#0047F6] rounded-2xl px-6 py-5 shadow-[0_12px_40px_rgba(0,23,74,0.2)] z-20 max-w-[320px]">
+              <div className="text-white/30 text-[28px] font-black leading-none mb-1">&ldquo;</div>
+              <p className="text-[13px] text-white font-semibold leading-relaxed">
+                Giáo dục không phải là tạo ra những học sinh giống nhau, mà là giúp mỗi học sinh trở thành phiên bản tốt nhất của chính mình.
+              </p>
             </div>
           </div>
         </motion.div>
       </div>
-    </div>
 
+      {/* Stats Bar */}
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}
+        className="bg-white rounded-[2rem] shadow-[0_8px_30px_rgba(0,23,74,0.06)] border border-[#E0E8FF] p-6 lg:p-8 mt-14 mb-0 relative z-30"
+      >
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            { icon: Users, value: "1000+", label: "Học sinh đã tham gia", sub: "các chương trình" },
+            { icon: Target, value: "200+", label: "Giải thưởng quốc tế", sub: "từ các cuộc thi uy tín" },
+            { icon: BookOpen, value: "50+", label: "Bài báo khoa học", sub: "được công bố" },
+            { icon: Globe, value: "100%", label: "Học sinh hài lòng", sub: "với chương trình tại GSJ" },
+          ].map((stat, idx) => (
+            <div key={idx} className="flex items-center gap-3 group">
+              <div className="w-12 h-12 rounded-full bg-[#F0F4FF] flex items-center justify-center shrink-0 group-hover:bg-[#0047F6] transition-colors duration-300">
+                <stat.icon className="w-5 h-5 text-[#0047F6] group-hover:text-white transition-colors duration-300" />
+              </div>
+              <div>
+                <div className="text-[22px] font-black text-[#0047F6] leading-none mb-0.5">{stat.value}</div>
+                <div className="text-[12px] font-bold text-[#0A2B70]">{stat.label}</div>
+                <div className="text-[10px] text-gray-400 font-medium">{stat.sub}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </motion.div>
+    </div>
   </section>
 );
 
@@ -491,33 +507,7 @@ const AdvisorsSection = () => {
   );
 };
 
-// --- Sticky Stats Bar ---
-const StickyStatsBar = () => (
-  <div className="fixed bottom-0 left-0 right-0 z-50 pointer-events-none">
-    <div className="max-w-6xl mx-auto px-4 lg:px-10 pb-4">
-      <div className="pointer-events-auto bg-white/95 backdrop-blur-md rounded-2xl shadow-[0_-4px_30px_rgba(0,23,74,0.12)] border border-[#E0E8FF] px-6 py-4 lg:px-8 lg:py-5">
-        <div className="grid grid-cols-4 gap-4 lg:gap-6">
-          {[
-            { icon: Users, value: "500+", label: "Học sinh đồng hành" },
-            { icon: Globe, value: "20+", label: "Quốc gia kết nối" },
-            { icon: BookOpen, value: "12+", label: "Chương trình học thuật" },
-            { icon: Heart, value: "100%", label: "Tận tâm & Chất lượng" },
-          ].map((stat, idx) => (
-            <div key={idx} className="flex items-center gap-3 group">
-              <div className="w-10 h-10 lg:w-11 lg:h-11 rounded-full bg-[#F0F4FF] flex items-center justify-center shrink-0 group-hover:bg-[#0047F6] transition-colors duration-300">
-                <stat.icon className="w-4 h-4 lg:w-5 lg:h-5 text-[#0047F6] group-hover:text-white transition-colors duration-300" />
-              </div>
-              <div className="min-w-0">
-                <div className="text-[20px] lg:text-[24px] font-black text-[#0047F6] leading-none mb-0.5">{stat.value}</div>
-                <div className="text-[11px] lg:text-[13px] font-bold text-[#0A2B70] leading-snug truncate">{stat.label}</div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  </div>
-);
+
 
 export default function AboutPage() {
   return (
@@ -528,7 +518,7 @@ export default function AboutPage() {
       <BoardSection />
       <AdvisorsSection />
       <Footer />
-      <StickyStatsBar />
+
     </main>
   );
 }

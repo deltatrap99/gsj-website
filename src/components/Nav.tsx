@@ -26,7 +26,7 @@ export function Nav() {
         { name: "Chương trình Khoa học Thực hành", path: "/research#thuc-hanh" },
         { name: "Kỳ thi Chuẩn hoá", path: "/research#chuan-hoa" },
         { name: "Chương trình Nghiên cứu Khoa học", path: "/research/nghien-cuu-khoa-hoc" },
-        { name: "Chương trình Du học & Ngoại khoá", path: "/research#du-hoc" }
+        { name: "Chương trình Du học & Ngoại khoá", path: "/research/du-hoc-ngoai-khoa" }
       ]
     },
     { name: "Hành trình tự hào", path: "/achievements" },
