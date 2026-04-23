@@ -2,17 +2,17 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Trophy, Medal, Award, Star, CheckCircle2 } from "lucide-react";
+import { Trophy, Medal, Award, Star, CheckCircle2, Users, Globe, BookOpen, FlaskConical, Target, Quote, Compass, Lightbulb, Network, Sprout } from "lucide-react";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 
 // Data
 const stats = [
-  { label: "1000+", text: "Học viên tham gia hàng năm tại các chương trình." },
-  { label: "100+", text: "Lớp Khoa học Tự nhiên tích hợp thực hành." },
-  { label: "200+", text: "Học viên tham gia định hướng nghề nghiệp trong nước và quốc tế." },
-  { label: "100+", text: "Dự án nghiên cứu khoa học - đổi mới sáng tạo." },
-  { label: "50+", text: "Giải thưởng danh giá toàn cầu như WICO, ICPC, iWISE, KIYO, ABS..." }
+  { icon: Users, label: "1000+", text: "Học viên tham gia hàng năm tại các chương trình." },
+  { icon: FlaskConical, label: "100+", text: "Lớp Khoa học Tự nhiên tích hợp thực hành." },
+  { icon: Globe, label: "200+", text: "Học viên tham gia định hướng nghề nghiệp trong nước và quốc tế." },
+  { icon: Lightbulb, label: "100+", text: "Dự án nghiên cứu khoa học – đổi mới sáng tạo." },
+  { icon: Trophy, label: "50+", text: "Giải thưởng danh giá toàn cầu như WICO, ICPC, iWISE, KIYO, ABS..." }
 ];
 
 export default function AchievementsPage() {
@@ -21,31 +21,118 @@ export default function AchievementsPage() {
       <Nav />
       
       {/* 1. Header & Stats */}
-      <section className="pt-32 pb-16 lg:pt-40 lg:pb-24 bg-white relative">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="absolute top-12 right-6 lg:right-20 bg-[#0A2B70] text-white px-5 py-1.5 tracking-widest rounded-[4px] font-bold shadow-md z-20">02</div>
-          
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-16 lg:mb-24">
-            <h1 className="text-4xl md:text-5xl lg:text-[54px] font-black text-[#0A2B70] uppercase tracking-tight">Hành trình Tự hào <span className="text-[#0047F6]">của GSJ</span></h1>
-          </motion.div>
-          
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-             <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }} className="space-y-6">
+      <section className="relative pt-28 pb-0 lg:pt-36 overflow-hidden bg-gradient-to-br from-[#F8FAFF] via-[#EEF3FF] to-[#E4ECFF]">
+        {/* Background decorative elements */}
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#0047F6]/[0.04] rounded-full blur-3xl -translate-y-1/3 translate-x-1/4"></div>
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#0047F6]/[0.03] rounded-full blur-3xl translate-y-1/3 -translate-x-1/4"></div>
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(#0047F6 1px, transparent 1px)", backgroundSize: "32px 32px" }}></div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-start">
+            
+            {/* Left Column */}
+            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="lg:col-span-5 relative z-20 pt-4">
+              <span className="inline-block px-5 py-2 rounded-full bg-[#0047F6] text-white text-[13px] font-bold uppercase tracking-[0.15em] mb-7 shadow-md">
+                Hành trình tự hào
+              </span>
+
+              <h1 className="text-4xl md:text-5xl lg:text-[50px] font-black text-[#0A2B70] mb-6 leading-[1.1] tracking-tight uppercase">
+                Những dấu ấn<br /><span className="text-[#0047F6]">chúng tôi tự hào</span>
+              </h1>
+
+              <p className="text-[15px] text-gray-600 font-medium leading-[1.8] mb-8 max-w-md">
+                GSJ không ngừng nỗ lực mang đến những chương trình giáo dục chất lượng và cơ hội phát triển toàn diện cho học sinh Việt Nam.
+              </p>
+
+              {/* Stats List */}
+              <div className="space-y-4">
                 {stats.map((item, idx) => (
-                  <div key={idx} className="flex gap-4 items-start">
-                    <div className="font-black text-2xl text-[#0047F6] shrink-0 w-24">{item.label}</div>
-                    <div className="text-[17px] text-[#0A2B70] font-medium leading-relaxed">
-                       {item.text}
+                  <motion.div key={idx} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 * idx, duration: 0.4 }}
+                    className="flex items-center gap-4 group"
+                  >
+                    <div className="w-11 h-11 rounded-full bg-[#F0F4FF] border border-[#E0E8FF] flex items-center justify-center shrink-0 group-hover:bg-[#0047F6] group-hover:border-[#0047F6] transition-colors duration-300">
+                      <item.icon className="w-5 h-5 text-[#0047F6] group-hover:text-white transition-colors duration-300" />
+                    </div>
+                    <div className="flex items-baseline gap-3">
+                      <span className="text-[22px] font-black text-[#0047F6] shrink-0 w-16">{item.label}</span>
+                      <span className="text-[14px] text-gray-600 font-medium leading-snug">{item.text}</span>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Right Column - Images */}
+            <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="lg:col-span-7 relative">
+              {/* Blob behind */}
+              <div className="absolute -top-6 -right-6 -bottom-6 -left-2 bg-gradient-to-br from-[#D6E4FF] to-[#E8EFFF] rounded-[3rem] rotate-1 hidden lg:block"></div>
+              
+              <div className="relative z-10">
+                {/* Main Image Grid */}
+                <div className="grid grid-cols-12 gap-4">
+                  {/* Large left image */}
+                  <div className="col-span-7 relative">
+                    {/* Floating star icon */}
+                    <div className="absolute -top-4 -left-4 w-12 h-12 bg-[#FFD966] rounded-2xl flex items-center justify-center shadow-lg z-20 rotate-6">
+                      <Star className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="rounded-[2rem] overflow-hidden shadow-[0_16px_50px_rgba(0,33,71,0.12)] border-4 border-white aspect-[4/5]">
+                      <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2070" className="w-full h-full object-cover" alt="GSJ students working together" />
                     </div>
                   </div>
-                ))}
-             </motion.div>
-             <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, delay: 0.2 }} className="grid grid-cols-2 gap-4 relative">
-                <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2070" className="rounded-3xl shadow-[0_20px_50px_rgba(0,16,48,0.15)] border-4 border-white w-full h-[220px] object-cover object-center" alt="GSJ class" />
-                <img src="/achievements.png" className="rounded-3xl shadow-[0_20px_50px_rgba(0,16,48,0.15)] border-4 border-white w-full h-[220px] object-cover mt-12" alt="GSJ Award Flags" />
-             </motion.div>
+
+                  {/* Right column: smaller image + quote card */}
+                  <div className="col-span-5 flex flex-col gap-4">
+                    {/* Small image with offset */}
+                    <div className="mt-8 rounded-[2rem] overflow-hidden shadow-[0_16px_50px_rgba(0,33,71,0.12)] border-4 border-white aspect-[4/3]">
+                      <img src="/achievements.png" className="w-full h-full object-cover" alt="GSJ Awards" />
+                    </div>
+
+                    {/* Floating trophy icon */}
+                    <div className="flex justify-center -mt-2 mb-1">
+                      <div className="w-11 h-11 bg-[#0047F6] rounded-full flex items-center justify-center shadow-lg">
+                        <Trophy className="w-5 h-5 text-white" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Quote Card - spanning full width below images */}
+                <div className="mt-4 bg-[#0047F6]/90 backdrop-blur-md rounded-2xl p-5 lg:p-6 shadow-xl">
+                  <Quote className="w-7 h-7 text-white/40 fill-white/40 mb-2 rotate-180" />
+                  <p className="text-[14px] lg:text-[15px] text-white font-semibold leading-relaxed">
+                    &ldquo;Giáo dục định hướng giúp mỗi học sinh nhận ra giá trị bản thân và kiến tạo tương lai.&rdquo;
+                  </p>
+                  <p className="text-[12px] text-white/60 font-medium mt-2">– GSJ Team</p>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
+
+        {/* Bottom Feature Cards */}
+        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.5 }} className="relative z-30 max-w-6xl mx-auto px-6 lg:px-10 mt-14 pb-0 lg:-mb-10">
+          <div className="bg-white rounded-[2rem] shadow-[0_16px_50px_rgba(0,23,74,0.08)] border border-[#E0E8FF] p-6 lg:p-8">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { icon: Compass, title: "Định hướng rõ ràng", desc: "Giúp học sinh xác định mục tiêu học tập và nghề nghiệp." },
+                { icon: Target, title: "Phát triển toàn diện", desc: "Kết hợp kiến thức, kỹ năng và tư duy thực tiễn." },
+                { icon: Network, title: "Mạng lưới toàn cầu", desc: "Kết nối với chuyên gia, trường đại học và tổ chức uy tín thế giới." },
+                { icon: Sprout, title: "Tác động bền vững", desc: "Đồng hành cùng thế hệ trẻ kiến tạo giá trị cho cộng đồng và hành tinh." },
+              ].map((item, idx) => (
+                <div key={idx} className="flex items-start gap-3 group">
+                  <div className="w-11 h-11 rounded-full bg-[#F0F4FF] flex items-center justify-center shrink-0 group-hover:bg-[#0047F6] transition-colors duration-300">
+                    <item.icon className="w-5 h-5 text-[#0047F6] group-hover:text-white transition-colors duration-300" />
+                  </div>
+                  <div>
+                    <div className="text-[14px] font-bold text-[#0A2B70] mb-1">{item.title}</div>
+                    <div className="text-[12px] text-gray-500 font-medium leading-snug">{item.desc}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
       </section>
 
       {/* 2. Hall of Fame Timeline */}

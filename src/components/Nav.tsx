@@ -23,10 +23,10 @@ export function Nav() {
       name: "Hệ sinh thái", 
       path: "/research",
       subMenu: [
-        { name: "Khoa học Thực hành", path: "/research#thuc-hanh" },
+        { name: "Chương trình Khoa học Thực hành", path: "/research#thuc-hanh" },
         { name: "Kỳ thi Chuẩn hoá", path: "/research#chuan-hoa" },
-        { name: "Dự án Nghiên cứu", path: "/research#nghien-cuu" },
-        { name: "Thực tập & Du học", path: "/research#du-hoc" }
+        { name: "Chương trình Nghiên cứu Khoa học", path: "/research/nghien-cuu-khoa-hoc" },
+        { name: "Chương trình Du học & Ngoại khoá", path: "/research#du-hoc" }
       ]
     },
     { name: "Hành trình tự hào", path: "/achievements" },

@@ -43,7 +43,7 @@ export default function HomePage() {
               <div className="text-[#6DB3F8] font-medium text-[15px] mb-4">GSJ | Global Science Journey</div>
               <h1 className="text-4xl md:text-5xl lg:text-[52px] font-black uppercase tracking-tight text-white mb-6 leading-[1.3]">
                 <div className="mb-2">KIẾN TẠO LỘ TRÌNH</div>
-                <div className="mb-2">TRÚNG TUYỂN ĐẠI HỌC</div>
+                <div className="mb-2 whitespace-nowrap">TRÚNG TUYỂN ĐẠI HỌC</div>
                 <div className="text-[#FFD966] relative inline-block mt-2">
                   TOP ĐẦU TOÀN CẦU
                   {/* Underline accent */}
@@ -56,26 +56,26 @@ export default function HomePage() {
               </p>
               
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-12">
-                <Link href="/register" className="px-7 py-3.5 bg-gradient-to-r from-[#0047F6] to-[#0A2B70] text-white rounded-full font-bold text-[15px] shadow-[0_0_20px_rgba(0,71,246,0.4)] hover:shadow-[0_0_30px_rgba(0,71,246,0.6)] transition-all flex items-center gap-2.5 border border-[#6DB3F8]/30">
-                  <Users className="w-5 h-5" />
+                <Link href="/register" className="px-7 py-3.5 whitespace-nowrap w-fit bg-gradient-to-r from-[#0047F6] to-[#0A2B70] text-white rounded-full font-bold text-[15px] shadow-[0_0_20px_rgba(0,71,246,0.4)] hover:shadow-[0_0_30px_rgba(0,71,246,0.6)] transition-all flex items-center justify-center gap-2.5 border border-[#6DB3F8]/30">
+                  <Users className="w-5 h-5 shrink-0" />
                   Tư vấn 1:1 cùng chuyên gia
-                  <ChevronRight className="w-4 h-4" />
+                  <ChevronRight className="w-4 h-4 shrink-0" />
                 </Link>
                 
                 <div className="relative group z-50">
-                  <button className="flex items-center gap-2.5 text-white font-medium hover:text-[#FFD966] transition-colors group">
-                    <PlayCircle className="w-6 h-6 text-white/80 group-hover:text-[#FFD966]" />
+                  <button className="flex items-center gap-2.5 whitespace-nowrap w-fit text-white font-medium hover:text-[#FFD966] transition-colors group">
+                    <PlayCircle className="w-6 h-6 shrink-0 text-white/80 group-hover:text-[#FFD966]" />
                     <span className="text-[15px]">Khám phá chương trình</span>
-                    <ChevronDown className="w-4 h-4 text-white/50 group-hover:text-[#FFD966] transition-transform duration-300 group-hover:-rotate-180" />
+                    <ChevronDown className="w-4 h-4 shrink-0 text-white/50 group-hover:text-[#FFD966] transition-transform duration-300 group-hover:-rotate-180" />
                   </button>
                   <div className="absolute top-full left-0 pt-4 w-64 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300">
                     <div className="bg-white rounded-2xl shadow-[0_20px_50px_rgba(0,30,120,0.12)] border border-gray-100 py-2 overflow-hidden transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                       <div className="flex flex-col">
                         {[
-                          { name: "Khoa học Thực hành", path: "/research#thuc-hanh" },
+                          { name: "Chương trình Khoa học Thực hành", path: "/research#thuc-hanh" },
                           { name: "Kỳ thi Chuẩn hoá", path: "/research#chuan-hoa" },
-                          { name: "Dự án Nghiên cứu", path: "/research#nghien-cuu" },
-                          { name: "Thực tập & Du học", path: "/research#du-hoc" }
+                          { name: "Chương trình Nghiên cứu Khoa học", path: "/research/nghien-cuu-khoa-hoc" },
+                          { name: "Chương trình Du học & Ngoại khoá", path: "/research#du-hoc" }
                         ].map((sub, i) => (
                            <Link 
                              key={i} 
@@ -228,10 +228,10 @@ export default function HomePage() {
                   </p>
 
                   {/* CTA Button */}
-                  <Link href="/about" className="inline-flex items-center gap-3 px-7 py-3.5 bg-white rounded-full border-2 border-[#0047F6]/20 text-[#0047F6] font-bold text-[15px] hover:bg-[#0047F6] hover:text-white hover:border-[#0047F6] transition-all duration-300 shadow-sm hover:shadow-lg w-fit group">
-                    <BookOpen className="w-4.5 h-4.5" />
-                    Đọc tiếp câu chuyện
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <Link href="/about" className="inline-flex items-center gap-3 px-7 py-3.5 whitespace-nowrap bg-white rounded-full border-2 border-[#0047F6]/20 text-[#0047F6] font-bold text-[15px] hover:bg-[#0047F6] hover:text-white hover:border-[#0047F6] transition-all duration-300 shadow-sm hover:shadow-lg w-fit group">
+                    <BookOpen className="w-4.5 h-4.5 shrink-0" />
+                    Đọc thêm về câu chuyện của GSJ
+                    <ArrowRight className="w-4 h-4 shrink-0 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
 
